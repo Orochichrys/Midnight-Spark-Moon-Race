@@ -1,0 +1,2797 @@
+{
+  "b": 255,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "Game_32Scene",
+  "name": "Game Scene",
+  "r": 255,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 255,
+  "uiSettings": {
+    "grid": false,
+    "gridType": "rectangular",
+    "gridWidth": 64,
+    "gridHeight": 64,
+    "gridDepth": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridOffsetZ": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": false,
+    "zoomFactor": 0.14513286445533935,
+    "windowMask": false,
+    "selectedLayer": ""
+  },
+  "objectsGroups": [],
+  "variables": [
+    {
+      "name": "OriginalEngineSpeedMax",
+      "type": "number",
+      "value": 6000
+    }
+  ],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 1792,
+      "layer": "",
+      "locked": true,
+      "name": "Road_3D",
+      "persistentUuid": "46a0d799-55c4-4f44-b430-120b5b0bc11e",
+      "width": 512,
+      "x": -1408,
+      "y": 1664,
+      "z": -10,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 255,
+      "height": 320,
+      "layer": "",
+      "name": "Road_3D",
+      "persistentUuid": "7e18d5f9-dfff-4bca-840a-a8089a7fa03e",
+      "rotationY": 75,
+      "width": 192,
+      "x": -79,
+      "y": 1245,
+      "z": -188,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 720,
+      "keepRatio": true,
+      "layer": "Background",
+      "locked": true,
+      "name": "Skybox",
+      "persistentUuid": "4563d4a1-ae53-4ef4-ad8d-9dd785f74c9c",
+      "width": 1280,
+      "x": 0,
+      "y": 0,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 256,
+      "layer": "",
+      "locked": true,
+      "name": "Grass_3D",
+      "persistentUuid": "0ded717a-a950-4abf-8393-0a554a43b2f2",
+      "width": 4608,
+      "x": -1664,
+      "y": 3968,
+      "z": -10,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 33,
+      "height": 39,
+      "layer": "",
+      "name": "PlayerCar",
+      "persistentUuid": "31232cc0-c2cd-4841-8233-8189786cb81f",
+      "width": 74,
+      "x": 645,
+      "y": 1475,
+      "zOrder": 8,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 1280,
+      "layer": "",
+      "locked": true,
+      "name": "Grass_3D",
+      "persistentUuid": "f9ea97fc-7ed3-421a-8559-e7f829e15f39",
+      "width": 256,
+      "x": 1920,
+      "y": 1920,
+      "z": -10,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "MobileControls",
+      "locked": true,
+      "name": "Speed_Joystick",
+      "persistentUuid": "98bcbea1-1b37-46a3-8686-ff716b1b1024",
+      "width": 0,
+      "x": 1072,
+      "y": 537,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "MobileControls",
+      "locked": true,
+      "name": "Steer_Joystick",
+      "persistentUuid": "6c0d6cbc-a8d1-4930-b2e4-a83ac76f2d7e",
+      "width": 0,
+      "x": 208,
+      "y": 537,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TrafficCone",
+      "persistentUuid": "d099a348-ab4f-49c1-95d1-96f433ab7515",
+      "width": 0,
+      "x": 1360,
+      "y": 1680,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TrafficCone",
+      "persistentUuid": "b372c747-5d02-4905-b811-3f2d08302d8f",
+      "width": 0,
+      "x": 1360,
+      "y": 1136,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 2,
+      "height": 512,
+      "keepRatio": true,
+      "layer": "",
+      "name": "FinishLine_3D",
+      "persistentUuid": "242e38cc-5ccc-4213-8807-aee00c5f77a1",
+      "width": 128,
+      "x": 1536,
+      "y": 1153,
+      "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 128,
+      "keepRatio": true,
+      "layer": "UI",
+      "name": "LapText",
+      "persistentUuid": "0df2e3be-2714-4f3a-9d8d-070d5aafb98e",
+      "width": 416,
+      "x": 32,
+      "y": 32,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 256,
+      "layer": "",
+      "locked": true,
+      "name": "Grass_3D",
+      "persistentUuid": "4228bb12-f49e-4d04-846f-2b11fdd409f4",
+      "width": 3072,
+      "x": -896,
+      "y": 3200,
+      "z": -10,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 2816,
+      "layer": "",
+      "locked": true,
+      "name": "Grass_3D",
+      "persistentUuid": "083123ad-65ee-4fe8-a533-7012fe3919b3",
+      "width": 256,
+      "x": 2688,
+      "y": 1152,
+      "z": -10,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 256,
+      "layer": "",
+      "locked": true,
+      "name": "Grass_3D",
+      "persistentUuid": "957d4411-69db-4efc-b0d8-d85469aa992f",
+      "sealed": true,
+      "width": 3072,
+      "x": -896,
+      "y": 1664,
+      "z": -10,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 512,
+      "layer": "",
+      "locked": true,
+      "name": "Road_3D",
+      "persistentUuid": "fde56f5b-98c9-4f2b-88a4-e2e38543f417",
+      "width": 4096,
+      "x": -1408,
+      "y": 3456,
+      "z": -10,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 1792,
+      "layer": "",
+      "locked": true,
+      "name": "Road_3D",
+      "persistentUuid": "9e640006-bc3b-4f2c-b159-0f8db6c5eb77",
+      "width": 512,
+      "x": 2176,
+      "y": 1664,
+      "z": -10,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 512,
+      "layer": "",
+      "locked": true,
+      "name": "Road_3D",
+      "persistentUuid": "7cf2d31f-329b-441d-8ebe-3b348efff87e",
+      "width": 4096,
+      "x": -1408,
+      "y": 1152,
+      "z": -10,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 1280,
+      "layer": "",
+      "locked": true,
+      "name": "Grass_3D",
+      "persistentUuid": "2f4cd3b9-bb95-46f1-977c-fd57f24b1adf",
+      "width": 256,
+      "x": -896,
+      "y": 1920,
+      "z": -10,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 2816,
+      "layer": "",
+      "locked": true,
+      "name": "Grass_3D",
+      "persistentUuid": "8981075f-191e-4f4f-9fc4-8aa4689a6c16",
+      "width": 256,
+      "x": -1664,
+      "y": 1152,
+      "z": -10,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 10,
+      "height": 256,
+      "layer": "",
+      "locked": true,
+      "name": "Grass_3D",
+      "persistentUuid": "6456938f-188e-4c70-846a-08648d40a731",
+      "width": 4608,
+      "x": -1664,
+      "y": 896,
+      "z": -10,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 270,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "CheckpointArrow",
+      "persistentUuid": "11f21b7d-6d1a-475f-b8af-40af39020148",
+      "width": 0,
+      "x": -1257,
+      "y": 1617,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Checkpoint",
+          "type": "number",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "CheckpointArrow",
+      "persistentUuid": "6609c5de-0942-442d-a5ea-854600876d72",
+      "width": 0,
+      "x": 2304,
+      "y": 1386,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "FinishLine",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "Checkpoint",
+          "type": "number",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "CheckpointArrow",
+      "persistentUuid": "81e614f0-a872-4733-8776-c1b39a179439",
+      "width": 0,
+      "x": 2343,
+      "y": 3591,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Checkpoint",
+          "type": "number",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "angle": 180,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "CheckpointArrow",
+      "persistentUuid": "5f4b441c-42df-49dd-afb1-688a02d82ce3",
+      "width": 0,
+      "x": -1104,
+      "y": 3637,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Checkpoint",
+          "type": "number",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TrafficCone",
+      "persistentUuid": "c052b642-2d5f-4282-89f0-df9355a4d69c",
+      "width": 0,
+      "x": 1488,
+      "y": 1136,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TrafficCone",
+      "persistentUuid": "2439a864-b9bb-4986-a5c9-46d37d0e084d",
+      "width": 0,
+      "x": 1424,
+      "y": 1136,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TrafficCone",
+      "persistentUuid": "74cf6e64-d85d-4c4b-9437-5593649bffa2",
+      "width": 0,
+      "x": 1488,
+      "y": 1680,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TrafficCone",
+      "persistentUuid": "960f5a09-aea1-468f-ab3e-4dccd65411a3",
+      "width": 0,
+      "x": 1424,
+      "y": 1680,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 33,
+      "height": 39,
+      "layer": "",
+      "name": "AI_Car",
+      "persistentUuid": "64b15583-1bca-4ac6-920f-f9314142ba69",
+      "width": 74,
+      "x": 644,
+      "y": 1328,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 128,
+      "height": 128,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Grass_3D",
+      "persistentUuid": "69b27562-b6bb-43c4-9bb1-1ff424e80419",
+      "width": 3027,
+      "x": -876,
+      "y": 1674,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 128,
+      "height": 1624,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Grass_3D",
+      "persistentUuid": "0e192e0b-ce8e-4501-aee5-da4e37746880",
+      "width": 128,
+      "x": 2009,
+      "y": 1788,
+      "zOrder": 19,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 128,
+      "height": 78,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Grass_3D",
+      "persistentUuid": "3f6b1785-0def-4320-8ae1-7d1ee1b0890d",
+      "width": 2899,
+      "x": -876,
+      "y": 3327,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 128,
+      "height": 1524,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Grass_3D",
+      "persistentUuid": "468ed80b-5f63-40dc-89da-47d3b611ca02",
+      "width": 128,
+      "x": -868,
+      "y": 1781,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 128,
+      "height": 128,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Grass_3D",
+      "persistentUuid": "cda0c622-8951-48bd-98d8-21296c006ab6",
+      "width": 4067,
+      "x": -1395,
+      "y": 1019,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 128,
+      "height": 2827,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Grass_3D",
+      "persistentUuid": "4b2bc59c-eb85-420f-b390-5bcc90bbe9ed",
+      "width": 128,
+      "x": 2672,
+      "y": 1140,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 128,
+      "height": 128,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Grass_3D",
+      "persistentUuid": "14c72ccd-e44b-43b9-b86e-3441a0605073",
+      "width": 4088,
+      "x": -1381,
+      "y": 3946,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 128,
+      "height": 3055,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Grass_3D",
+      "persistentUuid": "d987b590-3795-40f1-a43f-85df3305d34d",
+      "width": 128,
+      "x": -1538,
+      "y": 1019,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "assetStoreId": "",
+      "name": "Road_3D",
+      "type": "Scene3D::Cube3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "impassable": false,
+          "cost": 1
+        },
+        {
+          "isFolded": true,
+          "name": "Physics3D",
+          "type": "Physics3D::Physics3DBehavior",
+          "object3D": "Object3D",
+          "bodyType": "Static",
+          "bullet": false,
+          "fixedRotation": false,
+          "shape": "Box",
+          "shapeOrientation": "Z",
+          "shapeDimensionA": 0,
+          "shapeDimensionB": 0,
+          "shapeDimensionC": 0,
+          "density": 1,
+          "friction": 7,
+          "restitution": 0,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 1,
+          "layers": 17,
+          "masks": 17,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "shapeOffsetZ": 0,
+          "massCenterOffsetX": 0,
+          "massCenterOffsetY": 0,
+          "massCenterOffsetZ": 0,
+          "massOverride": 0
+        }
+      ],
+      "content": {
+        "width": 128,
+        "height": 128,
+        "depth": 128,
+        "enableTextureTransparency": false,
+        "facesOrientation": "Y",
+        "frontFaceResourceName": "assets\\StartingCheckeredPattern.png",
+        "backFaceResourceName": "assets\\StartingCheckeredPattern.png",
+        "backFaceUpThroughWhichAxisRotation": "X",
+        "leftFaceResourceName": "assets\\StartingCheckeredPattern.png",
+        "rightFaceResourceName": "assets\\StartingCheckeredPattern.png",
+        "topFaceResourceName": "assets\\StartingCheckeredPattern.png",
+        "bottomFaceResourceName": "assets\\StartingCheckeredPattern.png",
+        "frontFaceVisible": true,
+        "backFaceVisible": true,
+        "leftFaceVisible": true,
+        "rightFaceVisible": true,
+        "topFaceVisible": true,
+        "bottomFaceVisible": true,
+        "frontFaceResourceRepeat": true,
+        "backFaceResourceRepeat": true,
+        "leftFaceResourceRepeat": true,
+        "rightFaceResourceRepeat": true,
+        "topFaceResourceRepeat": true,
+        "bottomFaceResourceRepeat": true,
+        "materialType": "StandardWithoutMetalness",
+        "tint": "255;255;255",
+        "isCastingShadow": true,
+        "isReceivingShadow": true
+      }
+    },
+    {
+      "assetStoreId": "",
+      "height": 128,
+      "name": "Skybox",
+      "texture": "assets\\StartingBackground.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 128,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "name": "Grass_3D",
+      "type": "Scene3D::Cube3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 10,
+          "impassable": true
+        },
+        {
+          "isFolded": true,
+          "name": "Physics3D",
+          "type": "Physics3D::Physics3DBehavior",
+          "object3D": "Object3D",
+          "bodyType": "Static",
+          "bullet": false,
+          "fixedRotation": false,
+          "shape": "Box",
+          "shapeOrientation": "Z",
+          "shapeDimensionA": 0,
+          "shapeDimensionB": 0,
+          "shapeDimensionC": 0,
+          "density": 1,
+          "friction": 6,
+          "restitution": 0.1,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 1,
+          "layers": 17,
+          "masks": 17,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "shapeOffsetZ": 0,
+          "massCenterOffsetX": 0,
+          "massCenterOffsetY": 0,
+          "massCenterOffsetZ": 0,
+          "massOverride": 0
+        }
+      ],
+      "content": {
+        "width": 128,
+        "height": 128,
+        "depth": 128,
+        "enableTextureTransparency": false,
+        "facesOrientation": "Y",
+        "frontFaceResourceName": "assets\\StartingGround.png",
+        "backFaceResourceName": "assets\\StartingGround.png",
+        "backFaceUpThroughWhichAxisRotation": "X",
+        "leftFaceResourceName": "assets\\StartingGround.png",
+        "rightFaceResourceName": "assets\\StartingGround.png",
+        "topFaceResourceName": "assets\\StartingGround.png",
+        "bottomFaceResourceName": "assets\\StartingGround.png",
+        "frontFaceVisible": true,
+        "backFaceVisible": true,
+        "leftFaceVisible": true,
+        "rightFaceVisible": true,
+        "topFaceVisible": true,
+        "bottomFaceVisible": true,
+        "frontFaceResourceRepeat": true,
+        "backFaceResourceRepeat": true,
+        "leftFaceResourceRepeat": true,
+        "rightFaceResourceRepeat": true,
+        "topFaceResourceRepeat": true,
+        "bottomFaceResourceRepeat": true,
+        "materialType": "StandardWithoutMetalness",
+        "tint": "255;255;255",
+        "isCastingShadow": false,
+        "isReceivingShadow": true
+      }
+    },
+    {
+      "assetStoreId": "cddab55130dbd5a0b36f763200e876fb514aa608e1b057a136ebdb5f80006e2c",
+      "name": "PlayerCar",
+      "type": "Scene3D::Model3DObject",
+      "variables": [
+        {
+          "name": "CurrentItem",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LastCheckPoint",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LapNumber",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Physics3D",
+          "type": "Physics3D::Physics3DBehavior",
+          "object3D": "Object3D",
+          "bodyType": "Dynamic",
+          "bullet": false,
+          "fixedRotation": false,
+          "shape": "Box",
+          "shapeOrientation": "Z",
+          "shapeDimensionA": 74,
+          "shapeDimensionB": 39,
+          "shapeDimensionC": 27,
+          "density": 1,
+          "friction": 10,
+          "restitution": 0.5,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 6,
+          "layers": 17,
+          "masks": 17,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "shapeOffsetZ": 6,
+          "massCenterOffsetX": 0,
+          "massCenterOffsetY": 0,
+          "massCenterOffsetZ": -25,
+          "massOverride": 1500
+        },
+        {
+          "name": "PhysicsCar3D",
+          "type": "Physics3D::PhysicsCar3D",
+          "physics3D": "Physics3D",
+          "steerAngleMax": 70,
+          "beginningSteerSpeed": 140,
+          "endSteerSpeed": 10,
+          "mass": 1500,
+          "engineTorqueMax": 8000,
+          "engineSpeedMax": 6000,
+          "engineInertia": 0.95,
+          "reverseGearRatio1": -2.9,
+          "gearRatio1": 2.66,
+          "gearRatio2": 1.78,
+          "gearRatio3": 1.3,
+          "gearRatio4": 1,
+          "gearRatio5": 0.74,
+          "gearRatio6": 0,
+          "backWheelOffsetX": -6,
+          "frontWheelOffsetX": 10,
+          "wheelOffsetY": 3,
+          "wheelOffsetZ": 0,
+          "wheelRadius": 6,
+          "wheelWidth": 3,
+          "brakeTorqueMax": 3000,
+          "handBrakeTorqueMax": 6000,
+          "hasBackWheelDrive": false,
+          "hasFrontWheelDrive": true,
+          "pitchRollAngleMax": 89
+        },
+        {
+          "name": "PhysicsCar3DKeyboardMapper",
+          "type": "PhysicsCar3DKeyMapper::PhysicsCar3DKeyboardMapper",
+          "PhysicsCar3D": "PhysicsCar3D",
+          "HandBrake": "Space",
+          "Up": "Up",
+          "Left": "Left",
+          "Down": "Down",
+          "Right": "Right"
+        },
+        {
+          "name": "PhysicsCar3DMultitouchMapper",
+          "type": "SpriteMultitouchJoystick::PhysicsCar3DMultitouchMapper",
+          "PhysicsCar3D": "PhysicsCar3D",
+          "ControllerIdentifier": 1,
+          "SteerJoystickIdentifier": "Primary",
+          "SpeedJoystickIdentifier": "Secondary",
+          "HandBrakeButton": "B"
+        },
+        {
+          "name": "ThirdPersonCamera",
+          "type": "ThirdPersonCamera::ThirdPersonCamera",
+          "Object3D": "Object3D",
+          "RotationHalfwayDuration": 0.125,
+          "TranslationZHalfwayDuration": 0.25,
+          "Distance": 450,
+          "LateralOffset": 0,
+          "AheadOffset": 200,
+          "OffsetZ": 0,
+          "RotationAngleOffset": 0,
+          "ElevationAngleOffset": 10,
+          "FollowFreeAreaZMax": 0,
+          "FollowFreeAreaZMin": 0,
+          "RotationLogSpeed": 2.0247e-320,
+          "TranslationZLogSpeed": 2.0247e-320,
+          "IsCalledManually": false,
+          "CameraZ": 0,
+          "LocalOffsetY": 200,
+          "LocalOffsetX": 0,
+          "OffsetY": 200,
+          "ElevationHalfwayDuration": 1,
+          "IsElevatingWithObject": false,
+          "OffsetX": 0
+        }
+      ],
+      "content": {
+        "centerLocation": "ObjectCenter",
+        "crossfadeDuration": 0,
+        "depth": 74,
+        "height": 74,
+        "isCastingShadow": true,
+        "isReceivingShadow": true,
+        "keepAspectRatio": true,
+        "materialType": "StandardWithoutMetalness",
+        "modelResourceName": "assets\\Orange - Sedan Sports.glb",
+        "originLocation": "ModelOrigin",
+        "rotationX": 90,
+        "rotationY": 0,
+        "rotationZ": -90,
+        "width": 74,
+        "animations": []
+      }
+    },
+    {
+      "assetStoreId": "e71bd69f896d6c7531b48c65ceb5da25071d4fbdeb518aeceecba8d21f34ed8d",
+      "name": "Speed_Joystick",
+      "type": "SpriteMultitouchJoystick::SpriteMultitouchJoystick",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "DeadZoneRadius": 0.2,
+        "JoystickIdentifier": "Primary"
+      },
+      "childrenContent": {
+        "Border": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Flat dark joystick border.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Thumb": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Flat dark joystick thumb.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "e71bd69f896d6c7531b48c65ceb5da25071d4fbdeb518aeceecba8d21f34ed8d",
+      "name": "Steer_Joystick",
+      "type": "SpriteMultitouchJoystick::SpriteMultitouchJoystick",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "JoystickIdentifier": "Secondary",
+        "DeadZoneRadius": 0.2
+      },
+      "childrenContent": {
+        "Border": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Flat dark joystick border.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Thumb": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\Flat dark joystick thumb.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "8f75165255eac00288d9b81c0063f2a3bdb26a7748fc7b2e17963a426f0a0aa4",
+      "name": "TrafficCone",
+      "type": "Scene3D::Model3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Physics3D",
+          "type": "Physics3D::Physics3DBehavior",
+          "object3D": "Object3D",
+          "bodyType": "Dynamic",
+          "bullet": false,
+          "fixedRotation": false,
+          "shape": "Cylinder",
+          "shapeOrientation": "Z",
+          "shapeDimensionA": 0,
+          "shapeDimensionB": 0,
+          "shapeDimensionC": 0,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "shapeOffsetZ": 0,
+          "massCenterOffsetX": 0,
+          "massCenterOffsetY": 0,
+          "massCenterOffsetZ": 0,
+          "massOverride": 0,
+          "density": 2,
+          "friction": 0.3,
+          "restitution": 0.1,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 2,
+          "layers": 17,
+          "masks": 17
+        }
+      ],
+      "content": {
+        "centerLocation": "ObjectCenter",
+        "crossfadeDuration": 0.10000000149011612,
+        "depth": 32,
+        "height": 32,
+        "isCastingShadow": true,
+        "isReceivingShadow": true,
+        "keepAspectRatio": true,
+        "materialType": "StandardWithoutMetalness",
+        "modelResourceName": "Traffic Cone.glb",
+        "originLocation": "ModelOrigin",
+        "rotationX": 90,
+        "rotationY": 0,
+        "rotationZ": 90,
+        "width": 32,
+        "animations": []
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "FinishLine_3D",
+      "type": "Scene3D::Cube3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "width": 128,
+        "height": 128,
+        "depth": 1,
+        "enableTextureTransparency": false,
+        "facesOrientation": "Y",
+        "frontFaceResourceName": "assets\\StartingFinishLine.png",
+        "backFaceResourceName": "",
+        "backFaceUpThroughWhichAxisRotation": "X",
+        "leftFaceResourceName": "assets\\StartingFinishLine.png",
+        "rightFaceResourceName": "assets\\StartingFinishLine.png",
+        "topFaceResourceName": "assets\\StartingFinishLine.png",
+        "bottomFaceResourceName": "assets\\StartingFinishLine.png",
+        "frontFaceVisible": true,
+        "backFaceVisible": false,
+        "leftFaceVisible": true,
+        "rightFaceVisible": true,
+        "topFaceVisible": true,
+        "bottomFaceVisible": true,
+        "frontFaceResourceRepeat": true,
+        "backFaceResourceRepeat": false,
+        "leftFaceResourceRepeat": true,
+        "rightFaceResourceRepeat": true,
+        "topFaceResourceRepeat": true,
+        "bottomFaceResourceRepeat": true,
+        "materialType": "StandardWithoutMetalness",
+        "tint": "255;255;255",
+        "isCastingShadow": false,
+        "isReceivingShadow": true
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "LapText",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Time: 00:00\nLap: 1",
+      "font": "assets\\NotoSansArabicUI-Black.ttf",
+      "textAlignment": "left",
+      "characterSize": 32,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Time: 00:00\nLap: 1",
+        "font": "assets\\NotoSansArabicUI-Black.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 32,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "CheckpointArrow",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Checkpoint",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FinishLine",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\StartingCheckpointArrow.png",
+                  "points": [
+                    {
+                      "name": "TravelDirection",
+                      "x": 128,
+                      "y": 64
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 22
+                      },
+                      {
+                        "x": 126,
+                        "y": 22
+                      },
+                      {
+                        "x": 126,
+                        "y": 106
+                      },
+                      {
+                        "x": 2,
+                        "y": 106
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "03911c92a0e640fb55c4ce39c3cb92fcf7f0b2e9612081a3e98fbfb6b4cab7a5",
+      "name": "BonusBox",
+      "type": "Scene3D::Cube3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "width": 100,
+        "height": 100,
+        "depth": 100,
+        "enableTextureTransparency": false,
+        "facesOrientation": "Y",
+        "frontFaceResourceName": "planks.png",
+        "backFaceResourceName": "planks.png",
+        "backFaceUpThroughWhichAxisRotation": "X",
+        "leftFaceResourceName": "planks.png",
+        "rightFaceResourceName": "planks.png",
+        "topFaceResourceName": "planks.png",
+        "bottomFaceResourceName": "planks.png",
+        "frontFaceVisible": true,
+        "backFaceVisible": true,
+        "leftFaceVisible": true,
+        "rightFaceVisible": true,
+        "topFaceVisible": true,
+        "bottomFaceVisible": true,
+        "frontFaceResourceRepeat": true,
+        "backFaceResourceRepeat": true,
+        "leftFaceResourceRepeat": true,
+        "rightFaceResourceRepeat": true,
+        "topFaceResourceRepeat": true,
+        "bottomFaceResourceRepeat": true,
+        "materialType": "StandardWithoutMetalness",
+        "isCastingShadow": true,
+        "isReceivingShadow": true,
+        "tint": "255;255;255"
+      }
+    },
+    {
+      "additive": true,
+      "assetStoreId": "edb6923baf2b0b51dac8f4ce53b1ec10a09243ca57fb694722d79eb5ed6a62b7",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 10,
+      "emitterForceMin": 5,
+      "flow": 100,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 300,
+      "name": "BoostParticles",
+      "particleAlpha1": 204,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 236,
+      "particleColor1": "43;151;255",
+      "particleColor2": "127;0;236",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 151,
+      "particleGreen2": 0,
+      "particleLifeTimeMax": 4,
+      "particleLifeTimeMin": 2,
+      "particleRed1": 43,
+      "particleRed2": 127,
+      "particleSize1": 30,
+      "particleSize2": 0,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 1,
+      "rendererParam2": 1,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "Assets\\ExplosionFog-Texture-2.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 3,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "edb6923baf2b0b51dac8f4ce53b1ec10a09243ca57fb694722d79eb5ed6a62b7",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 8,
+      "emitterForceMin": 5,
+      "flow": 2,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 300,
+      "name": "BoostParticles2",
+      "particleAlpha1": 204,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "252;0;255",
+      "particleColor2": "119;0;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 0,
+      "particleGreen2": 0,
+      "particleLifeTimeMax": 8,
+      "particleLifeTimeMin": 4,
+      "particleRed1": 252,
+      "particleRed2": 119,
+      "particleSize1": 0,
+      "particleSize2": 40,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 1,
+      "rendererParam2": 1,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "DarkMagicSmoke.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 3,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "additive": true,
+      "assetStoreId": "edb6923baf2b0b51dac8f4ce53b1ec10a09243ca57fb694722d79eb5ed6a62b7",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 90,
+      "emitterForceMin": 50,
+      "flow": 60,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 300,
+      "name": "BoostParticles3",
+      "particleAlpha1": 204,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 242,
+      "particleBlue2": 255,
+      "particleColor1": "74;255;242",
+      "particleColor2": "0;33;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 255,
+      "particleGreen2": 33,
+      "particleLifeTimeMax": 1,
+      "particleLifeTimeMin": 0.2,
+      "particleRed1": 74,
+      "particleRed2": 0,
+      "particleSize1": 10,
+      "particleSize2": 0,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 1,
+      "rendererParam2": 1,
+      "rendererType": "Quad",
+      "tank": -1,
+      "textureParticleName": "Glow.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 30,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "779ddcae2ce36616fb6c18a0b98a5bfa0aa401b4817fc64069674fc5f834dfa3",
+      "name": "Comete",
+      "type": "Scene3D::Cube3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Physics3D",
+          "type": "Physics3D::Physics3DBehavior",
+          "object3D": "Object3D",
+          "bodyType": "Dynamic",
+          "bullet": false,
+          "fixedRotation": false,
+          "shape": "Box",
+          "shapeOrientation": "Z",
+          "shapeDimensionA": 0,
+          "shapeDimensionB": 0,
+          "shapeDimensionC": 0,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "shapeOffsetZ": 0,
+          "massCenterOffsetX": 0,
+          "massCenterOffsetY": 0,
+          "massCenterOffsetZ": 0,
+          "massOverride": 0,
+          "density": 1,
+          "friction": 0.3,
+          "restitution": 0.1,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 1,
+          "layers": 17,
+          "masks": 17
+        }
+      ],
+      "content": {
+        "width": 100,
+        "height": 100,
+        "depth": 100,
+        "enableTextureTransparency": false,
+        "facesOrientation": "Y",
+        "frontFaceResourceName": "BrownSand512.jpg",
+        "backFaceResourceName": "BrownSand512.jpg",
+        "backFaceUpThroughWhichAxisRotation": "X",
+        "leftFaceResourceName": "BrownSand512.jpg",
+        "rightFaceResourceName": "BrownSand512.jpg",
+        "topFaceResourceName": "BrownSand512.jpg",
+        "bottomFaceResourceName": "BrownSand512.jpg",
+        "frontFaceVisible": true,
+        "backFaceVisible": true,
+        "leftFaceVisible": true,
+        "rightFaceVisible": true,
+        "topFaceVisible": true,
+        "bottomFaceVisible": true,
+        "frontFaceResourceRepeat": true,
+        "backFaceResourceRepeat": true,
+        "leftFaceResourceRepeat": true,
+        "rightFaceResourceRepeat": true,
+        "topFaceResourceRepeat": true,
+        "bottomFaceResourceRepeat": true,
+        "materialType": "StandardWithoutMetalness",
+        "isCastingShadow": true,
+        "isReceivingShadow": true,
+        "tint": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "VictoryText",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "You Win!",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "You Win!",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "AI_Car",
+      "type": "Scene3D::Model3DObject",
+      "variables": [
+        {
+          "name": "AICarNextCheckpoint",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "AICarLastCheckpoint",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TargetAngle",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "AngleDifference",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LapNumber",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Offset",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "isFolded": true,
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
+          "acceleration": 600,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "cellHeight": 20,
+          "cellWidth": 20,
+          "extraBorder": 0,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 300,
+          "rotateObject": true,
+          "smoothingMaxCellGap": 1
+        },
+        {
+          "isFolded": true,
+          "name": "Physics3D",
+          "type": "Physics3D::Physics3DBehavior",
+          "object3D": "Object3D",
+          "bodyType": "Dynamic",
+          "bullet": false,
+          "fixedRotation": false,
+          "shape": "Box",
+          "shapeOrientation": "Z",
+          "shapeDimensionA": 74,
+          "shapeDimensionB": 39,
+          "shapeDimensionC": 27,
+          "density": 1,
+          "friction": 10,
+          "restitution": 0.5,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 6,
+          "layers": 17,
+          "masks": 17,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "shapeOffsetZ": 6,
+          "massCenterOffsetX": 0,
+          "massCenterOffsetY": 0,
+          "massCenterOffsetZ": -25,
+          "massOverride": 1500
+        },
+        {
+          "isFolded": true,
+          "name": "PhysicsCar3D",
+          "type": "Physics3D::PhysicsCar3D",
+          "physics3D": "Physics3D",
+          "steerAngleMax": 70,
+          "beginningSteerSpeed": 140,
+          "endSteerSpeed": 10,
+          "mass": 1500,
+          "engineTorqueMax": 8000,
+          "engineSpeedMax": 6000,
+          "engineInertia": 0.95,
+          "reverseGearRatio1": -2.9,
+          "gearRatio1": 2.66,
+          "gearRatio2": 1.78,
+          "gearRatio3": 1.3,
+          "gearRatio4": 1,
+          "gearRatio5": 0.74,
+          "gearRatio6": 0,
+          "backWheelOffsetX": -6,
+          "frontWheelOffsetX": 10,
+          "wheelOffsetY": 3,
+          "wheelOffsetZ": 0,
+          "wheelRadius": 6,
+          "wheelWidth": 3,
+          "brakeTorqueMax": 3000,
+          "handBrakeTorqueMax": 6000,
+          "hasBackWheelDrive": false,
+          "hasFrontWheelDrive": true,
+          "pitchRollAngleMax": 89
+        }
+      ],
+      "content": {
+        "centerLocation": "ObjectCenter",
+        "crossfadeDuration": 0.10000000149011612,
+        "depth": 74,
+        "height": 74,
+        "isCastingShadow": true,
+        "isReceivingShadow": true,
+        "keepAspectRatio": true,
+        "materialType": "StandardWithoutMetalness",
+        "modelResourceName": "assets\\Orange - Sedan Sports.glb",
+        "originLocation": "ModelOrigin",
+        "rotationX": 90,
+        "rotationY": 0,
+        "rotationZ": -90,
+        "width": 74,
+        "animations": []
+      }
+    }
+  ],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "objectName": "Road_3D"
+      },
+      {
+        "objectName": "FinishLine_3D"
+      },
+      {
+        "objectName": "Grass_3D"
+      },
+      {
+        "objectName": "CheckpointArrow"
+      },
+      {
+        "objectName": "PlayerCar"
+      },
+      {
+        "objectName": "TrafficCone"
+      },
+      {
+        "objectName": "Skybox"
+      },
+      {
+        "objectName": "LapText"
+      },
+      {
+        "folderName": "Mobile Controls",
+        "children": [
+          {
+            "objectName": "Speed_Joystick"
+          },
+          {
+            "objectName": "Steer_Joystick"
+          }
+        ]
+      },
+      {
+        "objectName": "BonusBox"
+      },
+      {
+        "objectName": "BoostParticles"
+      },
+      {
+        "objectName": "BoostParticles2"
+      },
+      {
+        "objectName": "BoostParticles3"
+      },
+      {
+        "objectName": "Comete"
+      },
+      {
+        "objectName": "VictoryText"
+      },
+      {
+        "objectName": "AI_Car"
+      }
+    ]
+  },
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "PlayerCar",
+            "LastCheckPoint",
+            "=",
+            "SceneInstancesCount(CheckpointArrow)"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "CheckpointArrow"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Mouvement IA"
+    },
+    {
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "AI_Car",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "Physics3D::PhysicsCar3D::SimulateForwardKey"
+          },
+          "parameters": [
+            "AI_Car",
+            "PhysicsCar3D"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "CheckpointArrow",
+                "Checkpoint",
+                "=",
+                "AI_Car.AICarNextCheckpoint"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "TargetAngle",
+                "=",
+                "AngleBetweenPositions(AI_Car.X(),AI_Car.Y(),CheckpointArrow.X(),CheckpointArrow.Y())"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "AngleDifference",
+                "=",
+                "AngleDifference(AI_Car.Angle(),AI_Car.Variable(TargetAngle))"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "AI_Car.Variable(AngleDifference)",
+                    ">",
+                    "10"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics3D::PhysicsCar3D::SimulateSteeringStick"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "PhysicsCar3D",
+                    "-1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "AI_Car.Variable(AngleDifference)",
+                    "<",
+                    "-10"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics3D::PhysicsCar3D::SimulateSteeringStick"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "PhysicsCar3D",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "AI_Car",
+                "CheckpointArrow",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "CheckpointArrow",
+                "Checkpoint",
+                "=",
+                "AI_Car.AICarNextCheckpoint"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "AICarNextCheckpoint",
+                "+",
+                "1"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "AI_Car.AICarNextCheckpoint",
+                    ">",
+                    "SceneInstancesCount(CheckpointArrow)"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "AICarNextCheckpoint",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "LapNumber",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "folded": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PickNearest"
+          },
+          "parameters": [
+            "CheckpointArrow",
+            "PlayerCar.CenterX()",
+            "PlayerCar.CenterY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::CompareNumbers"
+          },
+          "parameters": [
+            "AngleDifference(AngleBetweenPositions(CheckpointArrow.CenterX(), CheckpointArrow.CenterY(), CheckpointArrow.PointX(\"TravelDirection\"), CheckpointArrow.PointY(\"TravelDirection\")), CheckpointArrow.AngleToObject(PlayerCar))",
+            "<",
+            "90"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::CompareNumbers"
+          },
+          "parameters": [
+            "AngleDifference(AngleBetweenPositions(CheckpointArrow.CenterX(), CheckpointArrow.CenterY(), CheckpointArrow.PointX(\"TravelDirection\"), CheckpointArrow.PointY(\"TravelDirection\")), CheckpointArrow.AngleToObject(PlayerCar))",
+            ">",
+            "-90"
+          ]
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "CheckpointArrow",
+                "Checkpoint",
+                "=",
+                "PlayerCar.LastCheckPoint + 1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "PlayerCar",
+                "LastCheckPoint",
+                "=",
+                "CheckpointArrow.Checkpoint"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "CheckpointArrow",
+                "FinishLine",
+                "True",
+                "Player.LastCheckPoint+1"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "PlayerCar",
+                "LastCheckPoint",
+                "=",
+                "SceneInstancesCount(CheckpointArrow)"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "PlayerCar",
+                "LastCheckPoint",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "PlayerCar",
+                "LapNumber",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "PlayerCar",
+                "\"LapTimer\""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "LapText",
+            "Text",
+            "=",
+            "\"Time: \" + ToString(roundTo(PlayerCar.ObjectTimerElapsedTime(\"LapTimer\"), 1)) + \"\nLap: \" + PlayerCar.LapNumber"
+          ]
+        }
+      ]
+    },
+    {
+      "aiGeneratedEventId": "01KDDXHCR37CXPQG24CH7WJ4PA",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "PlayerCar",
+            "BonusBox",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "BonusBox",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "PlayerCar",
+            "CurrentItem",
+            "=",
+            "RandomInRange(1, 3)"
+          ]
+        }
+      ]
+    },
+    {
+      "aiGeneratedEventId": "01KDDXPDT22928XRHZWHBZ2S5B",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextJustPressed"
+          },
+          "parameters": [
+            "",
+            "\"Space\""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "PlayerCar",
+            "CurrentItem",
+            "=",
+            "1"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Physics3D::PhysicsCar3D::SetEngineSpeedMax"
+          },
+          "parameters": [
+            "PlayerCar",
+            "PhysicsCar3D",
+            "=",
+            "9000"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "PlayerCar",
+            "\"BoostTimer\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "BoostParticles",
+            "PlayerCar.X()",
+            "PlayerCar.Y()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "BoostParticles",
+            "=",
+            "100"
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene3D::Base3DBehavior::SetZ"
+          },
+          "parameters": [
+            "",
+            "Object3D",
+            "=",
+            "PlayerCar.Object3D::Z()"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "PlayerCar",
+            "CurrentItem",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "aiGeneratedEventId": "01KDDXPV73GBKAT376WSXJMWZ4",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareObjectTimer"
+          },
+          "parameters": [
+            "PlayerCar",
+            "\"BoostTimer\"",
+            ">",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Physics3D::PhysicsCar3D::SetEngineSpeedMax"
+          },
+          "parameters": [
+            "PlayerCar",
+            "PhysicsCar3D",
+            "=",
+            "OriginalEngineSpeedMax"
+          ]
+        },
+        {
+          "type": {
+            "value": "ParticleSystem::StopEmission"
+          },
+          "parameters": [
+            "BoostParticles"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "PlayerCar",
+            "\"BoostTimer\""
+          ]
+        }
+      ]
+    },
+    {
+      "aiGeneratedEventId": "01KDDXQD2SBA6PAPKE4JXXCGP6",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextJustPressed"
+          },
+          "parameters": [
+            "",
+            "\"Space\""
+          ]
+        },
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "PlayerCar",
+            "CurrentItem",
+            "=",
+            "2"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Comete",
+            "PlayerCar.X() + 50 * cos(ToRad(PlayerCar.Angle()))",
+            "PlayerCar.Y() + 50 * sin(ToRad(PlayerCar.Angle()))",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene3D::Base3DBehavior::SetZ"
+          },
+          "parameters": [
+            "Comete",
+            "Object3D",
+            "=",
+            "PlayerCar.Object3D::Z() + 10"
+          ]
+        },
+        {
+          "type": {
+            "value": "AddForceAL"
+          },
+          "parameters": [
+            "Comete",
+            "PlayerCar.Angle()",
+            "500",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "PlayerCar",
+            "CurrentItem",
+            "=",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "aiGeneratedEventId": "01KDDXSYMN4MCAGJFY9W0FQ4D5",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "Comete",
+            "AI_Car",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ActivateBehavior"
+          },
+          "parameters": [
+            "AI_Car",
+            "PhysicsCar3D",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetObjectTimer"
+          },
+          "parameters": [
+            "AI_Car",
+            "\"StunTimer\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "Comete",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "aiGeneratedEventId": "01KDDXV6WJXR06BMJ5J7GJGK02",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "PlayerCar",
+            "LapNumber",
+            "=",
+            "3"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Montre"
+          },
+          "parameters": [
+            "VictoryText",
+            ""
+          ]
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Background",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": [
+        {
+          "effectType": "Scene3D::DirectionalLight",
+          "name": "3D Sun Light",
+          "doubleParameters": {
+            "distanceFromCamera": 1500,
+            "elevation": 40,
+            "frustumSize": 2500,
+            "intensity": 0.75,
+            "minimumShadowBias": 0.0001,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "color": "255;255;255",
+            "shadowQuality": "medium",
+            "top": "Z+"
+          },
+          "booleanParameters": {
+            "isCastingShadow": true
+          }
+        },
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Ambient Hemisphere Light",
+          "doubleParameters": {
+            "elevation": 40,
+            "intensity": 0.33,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "groundColor": "127;127;127",
+            "skyColor": "255;255;255",
+            "top": "Z+"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "MobileControls",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "UI",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "Animation",
+      "type": "AnimatableCapability::AnimatableBehavior"
+    },
+    {
+      "name": "Effect",
+      "type": "EffectCapability::EffectBehavior"
+    },
+    {
+      "name": "Flippable",
+      "type": "FlippableCapability::FlippableBehavior"
+    },
+    {
+      "name": "Object3D",
+      "type": "Scene3D::Base3DBehavior"
+    },
+    {
+      "name": "Opacity",
+      "type": "OpacityCapability::OpacityBehavior"
+    },
+    {
+      "name": "Pathfinding",
+      "type": "PathfindingBehavior::PathfindingBehavior"
+    },
+    {
+      "name": "PathfindingObstacle",
+      "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+    },
+    {
+      "name": "Physics3D",
+      "type": "Physics3D::Physics3DBehavior",
+      "gravityX": 0,
+      "gravityY": 0,
+      "gravityZ": -9.8,
+      "worldScale": 20
+    },
+    {
+      "name": "PhysicsCar3D",
+      "type": "Physics3D::PhysicsCar3D"
+    },
+    {
+      "name": "PhysicsCar3DKeyboardMapper",
+      "type": "PhysicsCar3DKeyMapper::PhysicsCar3DKeyboardMapper"
+    },
+    {
+      "name": "PhysicsCar3DMultitouchMapper",
+      "type": "SpriteMultitouchJoystick::PhysicsCar3DMultitouchMapper"
+    },
+    {
+      "name": "Resizable",
+      "type": "ResizableCapability::ResizableBehavior"
+    },
+    {
+      "name": "Scale",
+      "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Text",
+      "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "ThirdPersonCamera",
+      "type": "ThirdPersonCamera::ThirdPersonCamera"
+    }
+  ]
+}
