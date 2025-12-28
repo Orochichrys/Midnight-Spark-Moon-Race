@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.14513286445533935,
+    "zoomFactor": 0.2725359896773088,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -927,7 +927,7 @@
           "name": "PhysicsCar3D",
           "type": "Physics3D::PhysicsCar3D",
           "physics3D": "Physics3D",
-          "steerAngleMax": 70,
+          "steerAngleMax": 90,
           "beginningSteerSpeed": 140,
           "endSteerSpeed": 10,
           "mass": 1500,
@@ -1914,6 +1914,33 @@
           },
           "parameters": [
             "CheckpointArrow"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SystemInfo::HasTouchScreen"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"MobileControls\""
+              ]
+            }
           ]
         }
       ]
