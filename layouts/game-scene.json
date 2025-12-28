@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.2725359896773088,
+    "zoomFactor": 0.15002679255026424,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -42,6 +42,7 @@
       "locked": true,
       "name": "Road_3D",
       "persistentUuid": "46a0d799-55c4-4f44-b430-120b5b0bc11e",
+      "sealed": true,
       "width": 512,
       "x": -1408,
       "y": 1664,
@@ -248,6 +249,7 @@
       "locked": true,
       "name": "Grass_3D",
       "persistentUuid": "4228bb12-f49e-4d04-846f-2b11fdd409f4",
+      "sealed": true,
       "width": 3072,
       "x": -896,
       "y": 3200,
@@ -279,12 +281,10 @@
       "angle": 0,
       "customSize": true,
       "depth": 10,
-      "height": 256,
+      "height": 1585,
       "layer": "",
-      "locked": true,
       "name": "Grass_3D",
       "persistentUuid": "957d4411-69db-4efc-b0d8-d85469aa992f",
-      "sealed": true,
       "width": 3072,
       "x": -896,
       "y": 1664,
@@ -577,16 +577,15 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "depth": 128,
-      "height": 128,
+      "customSize": false,
+      "height": 0,
       "keepRatio": true,
       "layer": "",
-      "name": "Grass_3D",
-      "persistentUuid": "69b27562-b6bb-43c4-9bb1-1ff424e80419",
-      "width": 3027,
-      "x": -876,
-      "y": 1674,
+      "name": "AI_Car",
+      "persistentUuid": "1de42dd8-bf6a-4a64-8cbb-6ebd2ce51670",
+      "width": 0,
+      "x": 649,
+      "y": 1589,
       "zOrder": 18,
       "numberProperties": [],
       "stringProperties": [],
@@ -595,15 +594,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 128,
-      "height": 1624,
+      "depth": 100,
+      "height": 3324,
       "keepRatio": true,
       "layer": "",
-      "name": "Grass_3D",
-      "persistentUuid": "0e192e0b-ce8e-4501-aee5-da4e37746880",
-      "width": 128,
-      "x": 2009,
-      "y": 1788,
+      "name": "Mur",
+      "persistentUuid": "bf90a87c-3574-4a48-836c-eed595d6a7c3",
+      "width": 126,
+      "x": 2775,
+      "y": 897,
       "zOrder": 19,
       "numberProperties": [],
       "stringProperties": [],
@@ -612,15 +611,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 128,
-      "height": 78,
+      "depth": 100,
+      "height": 125,
       "keepRatio": true,
       "layer": "",
-      "name": "Grass_3D",
-      "persistentUuid": "3f6b1785-0def-4320-8ae1-7d1ee1b0890d",
-      "width": 2899,
-      "x": -876,
-      "y": 3327,
+      "name": "Mur",
+      "persistentUuid": "5707aa9c-32d1-4278-b83c-16a6ba47630c",
+      "width": 4479,
+      "x": -1645,
+      "y": 4082,
       "zOrder": 20,
       "numberProperties": [],
       "stringProperties": [],
@@ -629,15 +628,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 128,
-      "height": 1524,
+      "depth": 100,
+      "height": 3179,
       "keepRatio": true,
       "layer": "",
-      "name": "Grass_3D",
-      "persistentUuid": "468ed80b-5f63-40dc-89da-47d3b611ca02",
-      "width": 128,
-      "x": -868,
-      "y": 1781,
+      "name": "Mur",
+      "persistentUuid": "14b2d4cc-d4e9-43dd-8bba-cbfac1444eeb",
+      "width": 118,
+      "x": -1645,
+      "y": 917,
       "zOrder": 21,
       "numberProperties": [],
       "stringProperties": [],
@@ -646,15 +645,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 128,
-      "height": 128,
+      "depth": 100,
+      "height": 115,
       "keepRatio": true,
       "layer": "",
-      "name": "Grass_3D",
-      "persistentUuid": "cda0c622-8951-48bd-98d8-21296c006ab6",
-      "width": 4067,
-      "x": -1395,
-      "y": 1019,
+      "name": "Mur",
+      "persistentUuid": "2845a6ea-fca4-4770-bffe-06f8e1d56af6",
+      "width": 4395,
+      "x": -1566,
+      "y": 935,
       "zOrder": 22,
       "numberProperties": [],
       "stringProperties": [],
@@ -663,50 +662,16 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 128,
-      "height": 2827,
+      "depth": 100,
+      "height": 1393,
       "keepRatio": true,
       "layer": "",
-      "name": "Grass_3D",
-      "persistentUuid": "4b2bc59c-eb85-420f-b390-5bcc90bbe9ed",
-      "width": 128,
-      "x": 2672,
-      "y": 1140,
+      "name": "Mur",
+      "persistentUuid": "e25712ec-7571-4384-8a44-6765e766d8c4",
+      "width": 2567,
+      "x": -610,
+      "y": 1856,
       "zOrder": 23,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 128,
-      "height": 128,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Grass_3D",
-      "persistentUuid": "14c72ccd-e44b-43b9-b86e-3441a0605073",
-      "width": 4088,
-      "x": -1381,
-      "y": 3946,
-      "zOrder": 24,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 128,
-      "height": 3055,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Grass_3D",
-      "persistentUuid": "d987b590-3795-40f1-a43f-85df3305d34d",
-      "width": 128,
-      "x": -1538,
-      "y": 1019,
-      "zOrder": 25,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -720,12 +685,6 @@
       "variables": [],
       "effects": [],
       "behaviors": [
-        {
-          "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
-          "impassable": false,
-          "cost": 1
-        },
         {
           "isFolded": true,
           "name": "Physics3D",
@@ -805,12 +764,6 @@
       "variables": [],
       "effects": [],
       "behaviors": [
-        {
-          "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
-          "cost": 10,
-          "impassable": true
-        },
         {
           "isFolded": true,
           "name": "Physics3D",
@@ -1693,55 +1646,13 @@
       "type": "Scene3D::Model3DObject",
       "variables": [
         {
-          "name": "AICarNextCheckpoint",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "AICarLastCheckpoint",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "TargetAngle",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "AngleDifference",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "LapNumber",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "Offset",
+          "name": "Steer",
           "type": "number",
           "value": 0
         }
       ],
       "effects": [],
       "behaviors": [
-        {
-          "isFolded": true,
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "acceleration": 600,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 20,
-          "cellWidth": 20,
-          "extraBorder": 0,
-          "gridOffsetX": 0,
-          "gridOffsetY": 0,
-          "maxSpeed": 300,
-          "rotateObject": true,
-          "smoothingMaxCellGap": 1
-        },
         {
           "isFolded": true,
           "name": "Physics3D",
@@ -1820,6 +1731,116 @@
         "width": 74,
         "animations": []
       }
+    },
+    {
+      "assetStoreId": "",
+      "name": "Mur",
+      "type": "Scene3D::Cube3DObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Physics3D",
+          "type": "Physics3D::Physics3DBehavior",
+          "object3D": "Object3D",
+          "bodyType": "Static",
+          "bullet": false,
+          "fixedRotation": false,
+          "shape": "Box",
+          "shapeOrientation": "Z",
+          "shapeDimensionA": 0,
+          "shapeDimensionB": 0,
+          "shapeDimensionC": 0,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "shapeOffsetZ": 0,
+          "massCenterOffsetX": 0,
+          "massCenterOffsetY": 0,
+          "massCenterOffsetZ": 0,
+          "massOverride": 0,
+          "density": 1,
+          "friction": 0.3,
+          "restitution": 0.1,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 1,
+          "layers": 17,
+          "masks": 17
+        }
+      ],
+      "content": {
+        "width": 100,
+        "height": 100,
+        "depth": 100,
+        "enableTextureTransparency": false,
+        "facesOrientation": "Y",
+        "frontFaceResourceName": "",
+        "backFaceResourceName": "",
+        "backFaceUpThroughWhichAxisRotation": "X",
+        "leftFaceResourceName": "",
+        "rightFaceResourceName": "",
+        "topFaceResourceName": "",
+        "bottomFaceResourceName": "",
+        "frontFaceVisible": true,
+        "backFaceVisible": true,
+        "leftFaceVisible": true,
+        "rightFaceVisible": true,
+        "topFaceVisible": true,
+        "bottomFaceVisible": true,
+        "frontFaceResourceRepeat": false,
+        "backFaceResourceRepeat": false,
+        "leftFaceResourceRepeat": false,
+        "rightFaceResourceRepeat": false,
+        "topFaceResourceRepeat": false,
+        "bottomFaceResourceRepeat": false,
+        "materialType": "StandardWithoutMetalness",
+        "tint": "255;255;255",
+        "isCastingShadow": true,
+        "isReceivingShadow": true
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "debug",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Text",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Text",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -1880,6 +1901,12 @@
       },
       {
         "objectName": "AI_Car"
+      },
+      {
+        "objectName": "Mur"
+      },
+      {
+        "objectName": "debug"
       }
     ]
   },
@@ -1914,6 +1941,14 @@
           },
           "parameters": [
             "CheckpointArrow"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "Mur"
           ]
         }
       ],
@@ -1961,30 +1996,193 @@
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "AI_Car",
       "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "Physics3D::PhysicsCar3D::SimulateForwardKey"
-          },
-          "parameters": [
-            "AI_Car",
-            "PhysicsCar3D"
-          ]
-        }
-      ],
+      "actions": [],
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "Steer",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics3D::PhysicsCar3D::SimulateForwardKey"
+              },
+              "parameters": [
+                "AI_Car",
+                "PhysicsCar3D"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Rayon Central (Mur)"
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "NumberObjectVariable"
+                "value": "Raycaster3D::RaycastWithAngle"
               },
               "parameters": [
-                "CheckpointArrow",
-                "Checkpoint",
-                "=",
-                "AI_Car.AICarNextCheckpoint"
+                "",
+                "Mur",
+                "AI_Car.X()",
+                "AI_Car.Y()",
+                "AI_Car.Z()+20",
+                "AI_Car.Angle()",
+                "0",
+                "500",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Si mur devant, on regarde à gauche pour voir si c'est libre"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Raycaster3D::RaycastWithAngle"
+                  },
+                  "parameters": [
+                    "",
+                    "Mur",
+                    "AI_Car.X()",
+                    "AI_Car.Y()",
+                    "AI_Car.Z()+20",
+                    "AI_Car.Angle() - 45",
+                    "0",
+                    "400",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "Steer",
+                    "=",
+                    "-1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Si mur devant, on regarde à droitre pour voir si c'est libre"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Raycaster3D::RaycastWithAngle"
+                  },
+                  "parameters": [
+                    "",
+                    "Mur",
+                    "AI_Car.X()",
+                    "AI_Car.Y()",
+                    "AI_Car.Z()+20",
+                    "AI_Car.Angle() + 45",
+                    "0",
+                    "400",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "Steer",
+                    "=",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Sécurité Latérale (Éviter de frotter les murs)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Raycaster3D::RaycastWithAngle"
+              },
+              "parameters": [
+                "",
+                "Mur",
+                "AI_Car.X()",
+                "AI_Car.Y()",
+                "AI_Car.Z() + 20",
+                "AI_Car.Angle() - 30",
+                "0",
+                "150",
+                ""
               ]
             }
           ],
@@ -1995,76 +2193,9 @@
               },
               "parameters": [
                 "AI_Car",
-                "TargetAngle",
-                "=",
-                "AngleBetweenPositions(AI_Car.X(),AI_Car.Y(),CheckpointArrow.X(),CheckpointArrow.Y())"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "AngleDifference",
-                "=",
-                "AngleDifference(AI_Car.Angle(),AI_Car.Variable(TargetAngle))"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "AI_Car.Variable(AngleDifference)",
-                    ">",
-                    "10"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Physics3D::PhysicsCar3D::SimulateSteeringStick"
-                  },
-                  "parameters": [
-                    "AI_Car",
-                    "PhysicsCar3D",
-                    "-1"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "AI_Car.Variable(AngleDifference)",
-                    "<",
-                    "-10"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Physics3D::PhysicsCar3D::SimulateSteeringStick"
-                  },
-                  "parameters": [
-                    "AI_Car",
-                    "PhysicsCar3D",
-                    "1"
-                  ]
-                }
+                "Steer",
+                "+",
+                "0.6"
               ]
             }
           ]
@@ -2074,32 +2205,19 @@
           "conditions": [
             {
               "type": {
-                "value": "CollisionNP"
+                "value": "Raycaster3D::RaycastWithAngle"
               },
               "parameters": [
-                "AI_Car",
-                "CheckpointArrow",
                 "",
-                "",
+                "Mur",
+                "AI_Car.X()",
+                "AI_Car.Y()",
+                "AI_Car.Z() + 20",
+                "AI_Car.Angle() + 30",
+                "0",
+                "150",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "NumberObjectVariable"
-              },
-              "parameters": [
-                "CheckpointArrow",
-                "Checkpoint",
-                "=",
-                "AI_Car.AICarNextCheckpoint"
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
             }
           ],
           "actions": [
@@ -2109,50 +2227,49 @@
               },
               "parameters": [
                 "AI_Car",
-                "AICarNextCheckpoint",
+                "Steer",
                 "+",
-                "1"
+                "-0.6"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Application Finale de la Direction"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "Steer",
+                "!=",
+                "0"
               ]
             }
           ],
-          "events": [
+          "actions": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "AI_Car.AICarNextCheckpoint",
-                    ">",
-                    "SceneInstancesCount(CheckpointArrow)"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "AI_Car",
-                    "AICarNextCheckpoint",
-                    "=",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "AI_Car",
-                    "LapNumber",
-                    "+",
-                    "1"
-                  ]
-                }
+              "type": {
+                "value": "Physics3D::PhysicsCar3D::SimulateSteeringStick"
+              },
+              "parameters": [
+                "AI_Car",
+                "PhysicsCar3D",
+                "clamp(AI_Car.Variable(Steer), -1, 1)"
               ]
             }
           ]
@@ -2775,14 +2892,6 @@
     {
       "name": "Opacity",
       "type": "OpacityCapability::OpacityBehavior"
-    },
-    {
-      "name": "Pathfinding",
-      "type": "PathfindingBehavior::PathfindingBehavior"
-    },
-    {
-      "name": "PathfindingObstacle",
-      "type": "PathfindingBehavior::PathfindingObstacleBehavior"
     },
     {
       "name": "Physics3D",
