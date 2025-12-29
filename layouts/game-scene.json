@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.15002679255026424,
+    "zoomFactor": 0.7370816317994466,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -577,22 +577,6 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "AI_Car",
-      "persistentUuid": "1de42dd8-bf6a-4a64-8cbb-6ebd2ce51670",
-      "width": 0,
-      "x": 649,
-      "y": 1589,
-      "zOrder": 18,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": true,
       "depth": 100,
       "height": 3324,
@@ -672,6 +656,23 @@
       "x": -610,
       "y": 1856,
       "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 48,
+      "keepRatio": true,
+      "layer": "",
+      "name": "debug",
+      "persistentUuid": "09c6e508-91b3-4fa3-ba92-d0b310ae0b22",
+      "width": 254,
+      "x": 23,
+      "y": 154,
+      "zOrder": 24,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1649,6 +1650,21 @@
           "name": "Steer",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "dist_left",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dist_right",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "dist_center",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1811,20 +1827,20 @@
       "effects": [],
       "behaviors": [],
       "string": "Text",
-      "font": "",
+      "font": "assets\\NotoSansArabicUI-Black.ttf",
       "textAlignment": "left",
-      "characterSize": 20,
+      "characterSize": 40,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       },
       "content": {
         "bold": false,
-        "isOutlineEnabled": false,
-        "isShadowEnabled": false,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": true,
         "italic": false,
-        "outlineColor": "255;255;255",
+        "outlineColor": "0;0;0",
         "outlineThickness": 2,
         "shadowAngle": 90,
         "shadowBlurRadius": 2,
@@ -1834,12 +1850,12 @@
         "smoothed": true,
         "underlined": false,
         "text": "Text",
-        "font": "",
+        "font": "assets\\NotoSansArabicUI-Black.ttf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
-        "characterSize": 20,
+        "characterSize": 40,
         "lineHeight": 0,
-        "color": "0;0;0"
+        "color": "255;255;255"
       }
     }
   ],
@@ -1866,6 +1882,9 @@
       },
       {
         "objectName": "Skybox"
+      },
+      {
+        "objectName": "debug"
       },
       {
         "objectName": "LapText"
@@ -1904,9 +1923,6 @@
       },
       {
         "objectName": "Mur"
-      },
-      {
-        "objectName": "debug"
       }
     ]
   },
@@ -1981,6 +1997,23 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+          },
+          "parameters": [
+            "LapText",
+            "Text",
+            "=",
+            "\"Steer:\" + ToString(AI_Car.Steer) + \n\"C:\" + ToString(AI_Car.dist_center) + \n\"L:\" + ToString(AI_Car.dist_left) + \n\"R:\" + ToString(AI_Car.dist_right)"
+          ]
+        }
+      ]
+    },
+    {
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -2015,11 +2048,35 @@
             },
             {
               "type": {
-                "value": "Physics3D::PhysicsCar3D::SimulateForwardKey"
+                "value": "SetNumberObjectVariable"
               },
               "parameters": [
                 "AI_Car",
-                "PhysicsCar3D"
+                "dist_left",
+                "=",
+                "999"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "dist_right",
+                "=",
+                "999"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "dist_center",
+                "=",
+                "999"
               ]
             }
           ]
@@ -2034,7 +2091,99 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Rayon Central (Mur)"
+          "comment": "L'Oeil Gauche (Indépendant)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Raycaster3D::RaycastWithAngle"
+              },
+              "parameters": [
+                "",
+                "Mur",
+                "AI_Car.X()",
+                "AI_Car.Y()",
+                "AI_Car.Z()+20",
+                "AI_Car.Angle() - 45",
+                "0",
+                "700",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "dist_left",
+                "=",
+                "Raycaster3D::Distance()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "L'Oeil Droit (Indépendant - Au même niveau que le Gauche !)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Raycaster3D::RaycastWithAngle"
+              },
+              "parameters": [
+                "",
+                "Mur",
+                "AI_Car.X()",
+                "AI_Car.Y()",
+                "AI_Car.Z()+20",
+                "AI_Car.Angle() + 45",
+                "0",
+                "700",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "dist_right",
+                "=",
+                "Raycaster3D::Distance()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Si mur devant, on regarde à gauche pour voir si c'est libre"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -2051,12 +2200,53 @@
                 "AI_Car.Z()+20",
                 "AI_Car.Angle()",
                 "0",
-                "500",
+                "300 + (AI_Car.ForceLength() * 1.5)",
                 ""
               ]
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "dist_center",
+                "=",
+                "Raycaster3D::Distance()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Le Calcul du Cerveau (Calcul du virage)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "Steer",
+                "=",
+                "(AI_Car.Variable(dist_right) - AI_Car.Variable(dist_left)) / 40"
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -2068,30 +2258,43 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Si mur devant, on regarde à gauche pour voir si c'est libre"
+              "comment": "Freinage d'urgence"
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "Raycaster3D::RaycastWithAngle"
+                    "value": "NumberObjectVariable"
                   },
                   "parameters": [
-                    "",
-                    "Mur",
-                    "AI_Car.X()",
-                    "AI_Car.Y()",
-                    "AI_Car.Z()+20",
-                    "AI_Car.Angle() - 45",
-                    "0",
-                    "400",
-                    ""
+                    "AI_Car",
+                    "dist_center",
+                    "<",
+                    "150"
                   ]
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "Physics3D::PhysicsCar3D::SimulateAcceleratorStick"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "PhysicsCar3D",
+                    "0.3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Physics3D::PhysicsCar3D::SimulateHandBrakeKey"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "PhysicsCar3D"
+                  ]
+                },
                 {
                   "type": {
                     "value": "SetNumberObjectVariable"
@@ -2099,12 +2302,47 @@
                   "parameters": [
                     "AI_Car",
                     "Steer",
-                    "=",
-                    "-1"
+                    "+",
+                    "(AI_Car.Variable(dist_right) - AI_Car.Variable(dist_left)) / 100"
                   ]
                 }
               ]
             },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Mouvement Final"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics3D::PhysicsCar3D::SimulateSteeringStick"
+              },
+              "parameters": [
+                "AI_Car",
+                "PhysicsCar3D",
+                "clamp(AI_Car.Variable(Steer), -1, 1)"
+              ]
+            }
+          ],
+          "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
@@ -2115,265 +2353,33 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Si mur devant, on regarde à droitre pour voir si c'est libre"
+              "comment": "Accélérateur"
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "Raycaster3D::RaycastWithAngle"
+                    "value": "NumberObjectVariable"
                   },
                   "parameters": [
-                    "",
-                    "Mur",
-                    "AI_Car.X()",
-                    "AI_Car.Y()",
-                    "AI_Car.Z()+20",
-                    "AI_Car.Angle() + 45",
-                    "0",
-                    "400",
-                    ""
+                    "AI_Car",
+                    "dist_center",
+                    ">",
+                    "100"
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": "Physics3D::PhysicsCar3D::SimulateForwardKey"
                   },
                   "parameters": [
                     "AI_Car",
-                    "Steer",
-                    "=",
-                    "1"
+                    "PhysicsCar3D"
                   ]
                 }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Sécurité Latérale (Éviter de frotter les murs)"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Raycaster3D::RaycastWithAngle"
-              },
-              "parameters": [
-                "",
-                "Mur",
-                "AI_Car.X()",
-                "AI_Car.Y()",
-                "AI_Car.Z() + 20",
-                "AI_Car.Angle() - 30",
-                "0",
-                "150",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "Steer",
-                "+",
-                "0.6"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Raycaster3D::RaycastWithAngle"
-              },
-              "parameters": [
-                "",
-                "Mur",
-                "AI_Car.X()",
-                "AI_Car.Y()",
-                "AI_Car.Z() + 20",
-                "AI_Car.Angle() + 30",
-                "0",
-                "150",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "Steer",
-                "+",
-                "-0.6"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Malus de direction"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Détection Herbe à Gauche (Sortie de piste)"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Raycaster3D::RaycastWithAngle"
-              },
-              "parameters": [
-                "",
-                "Grass_3D",
-                "AI_Car.X()",
-                "AI_Car.Y()",
-                "AI_Car.Z() + 10",
-                "AI_Car.Angle() - 35",
-                "-15",
-                "250",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "Steer",
-                "+",
-                "1.5"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Détection Herbe à Droite (Sortie de piste)"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Raycaster3D::RaycastWithAngle"
-              },
-              "parameters": [
-                "",
-                "Grass_3D",
-                "AI_Car.X()",
-                "AI_Car.Y()",
-                "AI_Car.Z() + 10",
-                "AI_Car.Angle() + 35",
-                "-15",
-                "250",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "Steer",
-                "+",
-                "-1.5"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Application Finale de la Direction"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "Steer",
-                "!=",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Physics3D::PhysicsCar3D::SimulateSteeringStick"
-              },
-              "parameters": [
-                "AI_Car",
-                "PhysicsCar3D",
-                "clamp(AI_Car.Variable(Steer), -1, 1)"
               ]
             }
           ]
@@ -2510,6 +2516,7 @@
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
@@ -2853,6 +2860,11 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
     }
   ],
   "layers": [
