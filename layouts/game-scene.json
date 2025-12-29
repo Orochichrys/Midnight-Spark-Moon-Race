@@ -600,8 +600,8 @@
       "layer": "",
       "name": "Mur",
       "persistentUuid": "bf90a87c-3574-4a48-836c-eed595d6a7c3",
-      "width": 126,
-      "x": 2775,
+      "width": 119,
+      "x": 2782,
       "y": 897,
       "zOrder": 19,
       "numberProperties": [],
@@ -612,14 +612,14 @@
       "angle": 0,
       "customSize": true,
       "depth": 100,
-      "height": 125,
+      "height": 171,
       "keepRatio": true,
       "layer": "",
       "name": "Mur",
       "persistentUuid": "5707aa9c-32d1-4278-b83c-16a6ba47630c",
       "width": 4479,
       "x": -1645,
-      "y": 4082,
+      "y": 4036,
       "zOrder": 20,
       "numberProperties": [],
       "stringProperties": [],
@@ -646,7 +646,7 @@
       "angle": 0,
       "customSize": true,
       "depth": 100,
-      "height": 115,
+      "height": 135,
       "keepRatio": true,
       "layer": "",
       "name": "Mur",
@@ -2230,6 +2230,110 @@
                 "Steer",
                 "+",
                 "-0.6"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Malus de direction"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Détection Herbe à Gauche (Sortie de piste)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Raycaster3D::RaycastWithAngle"
+              },
+              "parameters": [
+                "",
+                "Grass_3D",
+                "AI_Car.X()",
+                "AI_Car.Y()",
+                "AI_Car.Z() + 10",
+                "AI_Car.Angle() - 35",
+                "-15",
+                "250",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "Steer",
+                "+",
+                "1.5"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Détection Herbe à Droite (Sortie de piste)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Raycaster3D::RaycastWithAngle"
+              },
+              "parameters": [
+                "",
+                "Grass_3D",
+                "AI_Car.X()",
+                "AI_Car.Y()",
+                "AI_Car.Z() + 10",
+                "AI_Car.Angle() + 35",
+                "-15",
+                "250",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "AI_Car",
+                "Steer",
+                "+",
+                "-1.5"
               ]
             }
           ]
