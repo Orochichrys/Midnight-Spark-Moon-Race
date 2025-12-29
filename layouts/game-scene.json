@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.7370816317994466,
+    "zoomFactor": 0.28172599320797287,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -568,8 +568,8 @@
       "name": "AI_Car",
       "persistentUuid": "64b15583-1bca-4ac6-920f-f9314142ba69",
       "width": 74,
-      "x": 644,
-      "y": 1328,
+      "x": 808,
+      "y": 1329,
       "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
@@ -673,6 +673,54 @@
       "x": 23,
       "y": 154,
       "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DebugRays",
+      "persistentUuid": "fd1cd993-7ff5-4bb9-bd2f-2dfa85fecc90",
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BoiteMystere",
+      "persistentUuid": "8867280d-bce5-4c31-a0d0-ef075706f5cd",
+      "width": 0,
+      "x": 1594,
+      "y": 1421,
+      "zOrder": 26,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BoiteMystere",
+      "persistentUuid": "7e0b2b91-22ce-4be7-961f-aa9e71c12535",
+      "width": 0,
+      "x": 1605,
+      "y": 1261,
+      "zOrder": 27,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -843,6 +891,16 @@
         },
         {
           "name": "LapNumber",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PowerUp",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TimerPlayer",
           "type": "number",
           "value": 0
         }
@@ -1354,15 +1412,15 @@
     },
     {
       "assetStoreId": "03911c92a0e640fb55c4ce39c3cb92fcf7f0b2e9612081a3e98fbfb6b4cab7a5",
-      "name": "BonusBox",
+      "name": "BoiteMystere",
       "type": "Scene3D::Cube3DObject",
       "variables": [],
       "effects": [],
       "behaviors": [],
       "content": {
-        "width": 100,
-        "height": 100,
-        "depth": 100,
+        "width": 50,
+        "height": 50,
+        "depth": 50,
         "enableTextureTransparency": false,
         "facesOrientation": "Y",
         "frontFaceResourceName": "planks.png",
@@ -1665,6 +1723,16 @@
           "name": "dist_center",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "PowerUp",
+          "type": "number",
+          "value": -1
+        },
+        {
+          "name": "TimerIA",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1857,11 +1925,224 @@
         "lineHeight": 0,
         "color": "255;255;255"
       }
+    },
+    {
+      "assetStoreId": "",
+      "name": "DebugRays",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 255,
+      "outlineSize": 1,
+      "outlineOpacity": 255,
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 0,
+        "b": 0
+      },
+      "outlineColor": {
+        "r": 255,
+        "g": 0,
+        "b": 0
+      }
+    },
+    {
+      "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+      "name": "RedFlame",
+      "type": "ParticleEmitter3D::ParticleEmitter3D",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "EndColor": "50;50;50",
+        "StartColor": "255;150;50",
+        "StartOpacity": 204,
+        "SpayConeAngle": 15,
+        "StartSizeMin": 10,
+        "StartSizeMax": 10,
+        "EndScale": 2,
+        "Flow": 100,
+        "LifespanMin": 0.5,
+        "LifespanMax": 0.8,
+        "Duration": 123456,
+        "StartSpeedMin": 300,
+        "StartSpeedMax": 600,
+        "ShouldAutodestruct": true
+      },
+      "childrenContent": {
+        "Particle": {
+          "adaptCollisionMaskAutomatically": true,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Image",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "LightGlow.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+      "name": "Bouclier",
+      "type": "ParticleEmitter3D::ParticleEmitter3D",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "EndColor": "0;255;100",
+        "StartColor": "0;255;100",
+        "StartOpacity": 100,
+        "SpayConeAngle": 360,
+        "StartSizeMin": 15,
+        "StartSizeMax": 15,
+        "EndScale": 0.375,
+        "Flow": 100,
+        "LifespanMin": 0.5,
+        "LifespanMax": 0.5,
+        "Duration": 123456,
+        "StartSpeedMin": 10,
+        "StartSpeedMax": 10,
+        "ShouldAutodestruct": true
+      },
+      "childrenContent": {
+        "Particle": {
+          "adaptCollisionMaskAutomatically": true,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Image",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "LightGlow.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "351f05a136c91ee1d9d6ff4f9cfbc4d40b3744d7c7ea74212b4853862d52d974",
+      "name": "Boost",
+      "type": "ParticleEmitter3D::ParticleEmitter3D",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "EndColor": "255;255;255",
+        "StartColor": "0;200;225",
+        "StartOpacity": 204,
+        "SpayConeAngle": 1,
+        "StartSizeMin": 8,
+        "StartSizeMax": 8,
+        "EndScale": 0.375,
+        "Flow": 100,
+        "LifespanMin": 0.2,
+        "LifespanMax": 0.2,
+        "Duration": 123456,
+        "StartSpeedMin": 800,
+        "StartSpeedMax": 800,
+        "ShouldAutodestruct": true
+      },
+      "childrenContent": {
+        "Particle": {
+          "adaptCollisionMaskAutomatically": true,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Image",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "LightGlow.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ],
   "objectsFolderStructure": {
     "folderName": "__ROOT",
     "children": [
+      {
+        "objectName": "DebugRays"
+      },
       {
         "objectName": "Road_3D"
       },
@@ -1901,7 +2182,7 @@
         ]
       },
       {
-        "objectName": "BonusBox"
+        "objectName": "BoiteMystere"
       },
       {
         "objectName": "BoostParticles"
@@ -1923,6 +2204,15 @@
       },
       {
         "objectName": "Mur"
+      },
+      {
+        "objectName": "RedFlame"
+      },
+      {
+        "objectName": "Bouclier"
+      },
+      {
+        "objectName": "Boost"
       }
     ]
   },
@@ -1957,14 +2247,6 @@
           },
           "parameters": [
             "CheckpointArrow"
-          ]
-        },
-        {
-          "type": {
-            "value": "Cache"
-          },
-          "parameters": [
-            "Mur"
           ]
         }
       ],
@@ -2008,291 +2290,61 @@
             "LapText",
             "Text",
             "=",
-            "\"Steer:\" + ToString(AI_Car.Steer) + \n\"C:\" + ToString(AI_Car.dist_center) + \n\"L:\" + ToString(AI_Car.dist_left) + \n\"R:\" + ToString(AI_Car.dist_right)"
+            "\"Steer:\" + ToString(AI_Car.Steer) + NewLine()+ \n\"C:\" + ToString(AI_Car.dist_center)  + NewLine()+\n\"L:\" + ToString(AI_Car.dist_left)  + NewLine()+\n\"R:\" + ToString(AI_Car.dist_right)"
           ]
         }
       ]
     },
     {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Mouvement IA"
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "PrimitiveDrawing::LineV2"
+          },
+          "parameters": [
+            "DebugRays",
+            "AI_Car.X()",
+            "AI_Car.Y()",
+            "AI_Car.X() + cos(ToRad(AI_Car.Angle())) * AI_Car.Variable(dist_center)",
+            "AI_Car.Y() + sin(ToRad(AI_Car.Angle())) * AI_Car.Variable(dist_center)",
+            "10"
+          ]
+        }
+      ]
     },
     {
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "AI_Car",
-      "conditions": [],
-      "actions": [],
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "IA",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
-          "type": "BuiltinCommonInstructions::Standard",
+          "folded": true,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "AI_Car",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "Steer",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "dist_left",
-                "=",
-                "999"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "dist_right",
-                "=",
-                "999"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "dist_center",
-                "=",
-                "999"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "L'Oeil Gauche (Indépendant)"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Raycaster3D::RaycastWithAngle"
-              },
-              "parameters": [
-                "",
-                "Mur",
-                "AI_Car.X()",
-                "AI_Car.Y()",
-                "AI_Car.Z()+20",
-                "AI_Car.Angle() - 45",
-                "0",
-                "700",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "dist_left",
-                "=",
-                "Raycaster3D::Distance()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "L'Oeil Droit (Indépendant - Au même niveau que le Gauche !)"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Raycaster3D::RaycastWithAngle"
-              },
-              "parameters": [
-                "",
-                "Mur",
-                "AI_Car.X()",
-                "AI_Car.Y()",
-                "AI_Car.Z()+20",
-                "AI_Car.Angle() + 45",
-                "0",
-                "700",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "dist_right",
-                "=",
-                "Raycaster3D::Distance()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Si mur devant, on regarde à gauche pour voir si c'est libre"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Raycaster3D::RaycastWithAngle"
-              },
-              "parameters": [
-                "",
-                "Mur",
-                "AI_Car.X()",
-                "AI_Car.Y()",
-                "AI_Car.Z()+20",
-                "AI_Car.Angle()",
-                "0",
-                "300 + (AI_Car.ForceLength() * 1.5)",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "dist_center",
-                "=",
-                "Raycaster3D::Distance()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Le Calcul du Cerveau (Calcul du virage)"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "AI_Car",
-                "Steer",
-                "=",
-                "(AI_Car.Variable(dist_right) - AI_Car.Variable(dist_left)) / 40"
-              ]
-            }
-          ],
+          "actions": [],
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Freinage d'urgence"
-            },
-            {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "AI_Car",
-                    "dist_center",
-                    "<",
-                    "150"
-                  ]
-                }
-              ],
+              "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "value": "Physics3D::PhysicsCar3D::SimulateAcceleratorStick"
+                    "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
                     "AI_Car",
-                    "PhysicsCar3D",
-                    "0.3"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Physics3D::PhysicsCar3D::SimulateHandBrakeKey"
-                  },
-                  "parameters": [
-                    "AI_Car",
-                    "PhysicsCar3D"
+                    "Steer",
+                    "=",
+                    "0"
                   ]
                 },
                 {
@@ -2301,48 +2353,35 @@
                   },
                   "parameters": [
                     "AI_Car",
-                    "Steer",
-                    "+",
-                    "(AI_Car.Variable(dist_right) - AI_Car.Variable(dist_left)) / 100"
+                    "dist_left",
+                    "=",
+                    "999"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "dist_right",
+                    "=",
+                    "999"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "dist_center",
+                    "=",
+                    "999"
                   ]
                 }
               ]
             },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Mouvement Final"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "Physics3D::PhysicsCar3D::SimulateSteeringStick"
-              },
-              "parameters": [
-                "AI_Car",
-                "PhysicsCar3D",
-                "clamp(AI_Car.Variable(Steer), -1, 1)"
-              ]
-            }
-          ],
-          "events": [
             {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
@@ -2353,7 +2392,516 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Accélérateur"
+              "comment": "L'Oeil Gauche (Indépendant)"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Raycaster3D::RaycastWithAngle"
+                  },
+                  "parameters": [
+                    "",
+                    "Mur",
+                    "AI_Car.X()",
+                    "AI_Car.Y()",
+                    "AI_Car.Z()+20",
+                    "AI_Car.Angle() - 45",
+                    "0",
+                    "700",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "dist_left",
+                    "=",
+                    "Raycaster3D::Distance()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::LineV2"
+                  },
+                  "parameters": [
+                    "DebugRays",
+                    "AI_Car.X()",
+                    "AI_Car.Y()",
+                    "AI_Car.X() + cos(ToRad(AI_Car.Angle() - 45)) * AI_Car.Variable(dist_left)",
+                    "AI_Car.Y() + sin(ToRad(AI_Car.Angle() - 45)) * AI_Car.Variable(dist_left)",
+                    "10"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "L'Oeil Droit (Indépendant)"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Raycaster3D::RaycastWithAngle"
+                  },
+                  "parameters": [
+                    "",
+                    "Mur",
+                    "AI_Car.X()",
+                    "AI_Car.Y()",
+                    "AI_Car.Z()+20",
+                    "AI_Car.Angle() + 45",
+                    "0",
+                    "700",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "dist_right",
+                    "=",
+                    "Raycaster3D::Distance()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::LineV2"
+                  },
+                  "parameters": [
+                    "DebugRays",
+                    "AI_Car.X()",
+                    "AI_Car.Y()",
+                    "AI_Car.X() + cos(ToRad(AI_Car.Angle() + 45)) * AI_Car.Variable(dist_right)",
+                    "AI_Car.Y() + sin(ToRad(AI_Car.Angle() + 45)) * AI_Car.Variable(dist_right)",
+                    "10"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Œil Central"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Raycaster3D::RaycastWithAngle"
+                  },
+                  "parameters": [
+                    "",
+                    "Mur",
+                    "AI_Car.X()",
+                    "AI_Car.Y()",
+                    "AI_Car.Z()+20",
+                    "AI_Car.Angle()",
+                    "0",
+                    "300 + (AI_Car.ForceLength() * 1.5)",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "dist_center",
+                    "=",
+                    "Raycaster3D::Distance()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::LineV2"
+                  },
+                  "parameters": [
+                    "DebugRays",
+                    "AI_Car.X()",
+                    "AI_Car.Y()",
+                    "AI_Car.X() + cos(ToRad(AI_Car.Angle())) * AI_Car.Variable(dist_center)",
+                    "AI_Car.Y() + sin(ToRad(AI_Car.Angle())) * AI_Car.Variable(dist_center)",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LapText",
+                    "Text",
+                    "=",
+                    "\"Mur toucher\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Le Calcul du Cerveau (Calcul du virage)"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "Steer",
+                    "=",
+                    "(AI_Car.Variable(dist_right) - AI_Car.Variable(dist_left)) / 40"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Freinage d'urgence"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "dist_center",
+                        "<",
+                        "150"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics3D::PhysicsCar3D::SimulateAcceleratorStick"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "PhysicsCar3D",
+                        "0.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Physics3D::PhysicsCar3D::SimulateHandBrakeKey"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "PhysicsCar3D"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "Steer",
+                        "+",
+                        "(AI_Car.Variable(dist_right) - AI_Car.Variable(dist_left)) / 100"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Mouvement Final"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics3D::PhysicsCar3D::SimulateSteeringStick"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "PhysicsCar3D",
+                    "clamp(AI_Car.Variable(Steer), -1, 1)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Accélérateur"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "dist_center",
+                        ">",
+                        "100"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics3D::PhysicsCar3D::SimulateForwardKey"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "PhysicsCar3D"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Player",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "PlayerCar",
+                "PowerUp",
+                "=",
+                "-1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "PlayerCar",
+                "TimerPlayer",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "PlayerCar",
+                "BoiteMystere",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "PlayerCar",
+                "PowerUp",
+                "=",
+                "-1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "PlayerCar",
+                "PowerUp",
+                "=",
+                "Random(3)"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "BoiteMystere",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"w\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "PlayerCar",
+                "PowerUp",
+                ">",
+                "-1"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "PlayerCar",
+                    "PowerUp",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "RedFlame",
+                    "PlayerCar.X()",
+                    "PlayerCar.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "RedFlame",
+                    "PlayerCar.Angle()",
+                    "800",
+                    "1"
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -2363,28 +2911,90 @@
                     "value": "NumberObjectVariable"
                   },
                   "parameters": [
-                    "AI_Car",
-                    "dist_center",
-                    ">",
-                    "100"
+                    "PlayerCar",
+                    "PowerUp",
+                    "=",
+                    "1"
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "Physics3D::PhysicsCar3D::SimulateForwardKey"
+                    "value": "Create"
                   },
                   "parameters": [
-                    "AI_Car",
-                    "PhysicsCar3D"
+                    "",
+                    "Boost",
+                    "PlayerCar.X()",
+                    "PlayerCar.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Boost",
+                    "PlayerCar.Angle()",
+                    "600",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "PlayerCar",
+                    "PowerUp",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Bouclier",
+                    "PlayerCar.X()",
+                    "PlayerCar.Y()",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "PlayerCar",
+                    "PowerUp",
+                    "=",
+                    "-1"
                   ]
                 }
               ]
             }
           ]
         }
-      ]
+      ],
+      "parameters": []
     },
     {
       "folded": true,
@@ -2535,6 +3145,7 @@
     },
     {
       "aiGeneratedEventId": "01KDDXHCR37CXPQG24CH7WJ4PA",
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2543,7 +3154,7 @@
           },
           "parameters": [
             "PlayerCar",
-            "BonusBox",
+            "BoiteMystere",
             "",
             "",
             ""
@@ -2556,7 +3167,7 @@
             "value": "Delete"
           },
           "parameters": [
-            "BonusBox",
+            "BoiteMystere",
             ""
           ]
         },
@@ -2575,6 +3186,7 @@
     },
     {
       "aiGeneratedEventId": "01KDDXPDT22928XRHZWHBZ2S5B",
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2667,6 +3279,7 @@
     },
     {
       "aiGeneratedEventId": "01KDDXPV73GBKAT376WSXJMWZ4",
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2714,6 +3327,7 @@
     },
     {
       "aiGeneratedEventId": "01KDDXQD2SBA6PAPKE4JXXCGP6",
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2787,6 +3401,7 @@
     },
     {
       "aiGeneratedEventId": "01KDDXSYMN4MCAGJFY9W0FQ4D5",
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2835,6 +3450,7 @@
     },
     {
       "aiGeneratedEventId": "01KDDXV6WJXR06BMJ5J7GJGK02",
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
