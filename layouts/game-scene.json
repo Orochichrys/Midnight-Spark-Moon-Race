@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.28172599320797287,
+    "zoomFactor": 0.27253598967730974,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -645,15 +645,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 1,
-      "height": 48,
-      "keepRatio": true,
-      "layer": "",
+      "depth": 2.666666666666666,
+      "height": 128,
+      "layer": "UI",
       "name": "debug",
       "persistentUuid": "09c6e508-91b3-4fa3-ba92-d0b310ae0b22",
-      "width": 254,
-      "x": 23,
-      "y": 154,
+      "width": 416,
+      "x": 32,
+      "y": 173,
       "zOrder": 24,
       "numberProperties": [],
       "stringProperties": [],
@@ -740,6 +739,38 @@
       "y": 1581,
       "z": 10,
       "zOrder": 29,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "UI",
+      "name": "debugMur",
+      "persistentUuid": "46741835-5384-4c12-a501-41060b235ef2",
+      "width": 0,
+      "x": 32,
+      "y": 336,
+      "zOrder": 30,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "AI_Car",
+      "persistentUuid": "feb8eb8b-7aed-4e00-9d0c-af3318c289bf",
+      "width": 0,
+      "x": 770,
+      "y": 1603,
+      "zOrder": 31,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1746,6 +1777,36 @@
           "name": "AttenteAvantPowerUp",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "danger_L",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "danger_R",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "danger_C",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "poids_L",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "poids_R",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LaneOffset",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1910,7 +1971,7 @@
       "string": "Text",
       "font": "assets\\NotoSansArabicUI-Black.ttf",
       "textAlignment": "left",
-      "characterSize": 40,
+      "characterSize": 32,
       "color": {
         "b": 255,
         "g": 255,
@@ -1934,7 +1995,7 @@
         "font": "assets\\NotoSansArabicUI-Black.ttf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
-        "characterSize": 40,
+        "characterSize": 32,
         "lineHeight": 0,
         "color": "255;255;255"
       }
@@ -1982,7 +2043,7 @@
         "Flow": 250,
         "LifespanMin": 0.5,
         "LifespanMax": 1.2,
-        "Duration": 123437,
+        "Duration": 3,
         "StartSpeedMin": 300,
         "StartSpeedMax": 600,
         "ShouldAutodestruct": true,
@@ -2045,7 +2106,7 @@
         "Flow": 150,
         "LifespanMin": 0.5,
         "LifespanMax": 0.5,
-        "Duration": 123456,
+        "Duration": 5,
         "StartSpeedMin": 50,
         "StartSpeedMax": 100,
         "ShouldAutodestruct": true,
@@ -2108,7 +2169,7 @@
         "Flow": 250,
         "LifespanMin": 0.2,
         "LifespanMax": 0.4,
-        "Duration": 123437,
+        "Duration": 2,
         "StartSpeedMin": 250,
         "StartSpeedMax": 400,
         "ShouldAutodestruct": true,
@@ -2151,6 +2212,49 @@
           ]
         }
       }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "debugMur",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Text",
+      "font": "assets\\NotoSansArabicUI-Black.ttf",
+      "textAlignment": "left",
+      "characterSize": 32,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Text",
+        "font": "assets\\NotoSansArabicUI-Black.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 32,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -2179,6 +2283,9 @@
       },
       {
         "objectName": "debug"
+      },
+      {
+        "objectName": "debugMur"
       },
       {
         "objectName": "LapText"
@@ -2231,6 +2338,7 @@
   },
   "events": [
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2300,7 +2408,7 @@
             "value": "TextContainerCapability::TextContainerBehavior::SetValue"
           },
           "parameters": [
-            "LapText",
+            "debug",
             "Text",
             "=",
             "\"Steer:\" + ToString(AI_Car.Steer) + NewLine()+ \n\"C:\" + ToString(AI_Car.dist_center)  + NewLine()+\n\"L:\" + ToString(AI_Car.dist_left)  + NewLine()+\n\"R:\" + ToString(AI_Car.dist_right)"
@@ -2345,11 +2453,56 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "IA",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Décalage de Couloir (Offset)"
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AI_Car",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "LaneOffset",
+                    "=",
+                    "RandomInRange(-60, 60)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         {
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "AI_Car",
@@ -2623,6 +2776,11 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
+              "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
               "actions": [
                 {
                   "type": {
@@ -2692,9 +2850,9 @@
                   "parameters": [
                     "",
                     "Mur",
-                    "AI_Car.X()",
-                    "AI_Car.Y()",
-                    "AI_Car.Z()+20",
+                    "AI_Car.X() + cos(ToRad(AI_Car.Angle() - 45)) * 40",
+                    "AI_Car.Y() + sin(ToRad(AI_Car.Angle() - 45)) * 40",
+                    "AI_Car.Z() +20",
                     "AI_Car.Angle() - 45",
                     "0",
                     "700",
@@ -2726,6 +2884,17 @@
                     "AI_Car.Y() + sin(ToRad(AI_Car.Angle() - 45)) * AI_Car.Variable(dist_left)",
                     "10"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "debugMur",
+                    "Text",
+                    "=",
+                    "NewLine() + \"Mur Gauche toucher\""
+                  ]
                 }
               ]
             },
@@ -2751,9 +2920,9 @@
                   "parameters": [
                     "",
                     "Mur",
-                    "AI_Car.X()",
-                    "AI_Car.Y()",
-                    "AI_Car.Z()+20",
+                    "AI_Car.X() + cos(ToRad(AI_Car.Angle() + 45)) * 40",
+                    "AI_Car.Y() + sin(ToRad(AI_Car.Angle() + 45)) * 40",
+                    "AI_Car.Z() +20",
                     "AI_Car.Angle() + 45",
                     "0",
                     "700",
@@ -2785,6 +2954,17 @@
                     "AI_Car.Y() + sin(ToRad(AI_Car.Angle() + 45)) * AI_Car.Variable(dist_right)",
                     "10"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "debugMur",
+                    "Text",
+                    "=",
+                    "NewLine() + \"Mur Droit toucher\""
+                  ]
                 }
               ]
             },
@@ -2810,8 +2990,8 @@
                   "parameters": [
                     "",
                     "Mur",
-                    "AI_Car.X()",
-                    "AI_Car.Y()",
+                    "AI_Car.X() + cos(ToRad(AI_Car.Angle())) * 40",
+                    "AI_Car.Y() + sin(ToRad(AI_Car.Angle())) * 40",
                     "AI_Car.Z()+20",
                     "AI_Car.Angle()",
                     "0",
@@ -2850,10 +3030,234 @@
                     "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                   },
                   "parameters": [
-                    "LapText",
+                    "debugMur",
                     "Text",
                     "=",
-                    "\"Mur toucher\""
+                    "NewLine() + \"Mur central toucher\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Danger Gauche"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "danger_L",
+                    "=",
+                    "clamp(1 - (AI_Car.Variable(dist_left) / 400), 0, 1)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Danger Droit"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "danger_R",
+                    "=",
+                    "clamp(1 - (AI_Car.Variable(dist_right) / 400), 0, 1)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Danger Centre"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "danger_C",
+                    "=",
+                    "clamp(1 - (AI_Car.Variable(dist_center) / 250), 0, 1)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Poids Gauche"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "poids_L",
+                    "=",
+                    "0.5 - AI_Car.Variable(danger_L)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Poids Droit"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "poids_R",
+                    "=",
+                    "0.5 - AI_Car.Variable(danger_R)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Calcul du Steer"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "Steer",
+                    "=",
+                    "((AI_Car.Variable(poids_R) - AI_Car.Variable(poids_L)) * 100) + AI_Car.Variable(LaneOffset)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Freinage Contextuel"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "danger_C",
+                    ">",
+                    "0.6"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics3D::PhysicsCar3D::SimulateHandBrakeKey"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "PhysicsCar3D"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "AI_Car",
+                    "Steer",
+                    "*",
+                    "2"
                   ]
                 }
               ]
@@ -2871,7 +3275,6 @@
               "comment": "Le Calcul du Cerveau (Calcul du virage)"
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -2968,7 +3371,6 @@
               "comment": "Mouvement Final"
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -3113,7 +3515,7 @@
                 "PlayerCar",
                 "PowerUp",
                 "=",
-                "1"
+                "RandomInRange(0,2)"
               ]
             },
             {
@@ -3136,7 +3538,7 @@
               },
               "parameters": [
                 "",
-                "\"w\""
+                "\"a\""
               ]
             },
             {
@@ -3171,6 +3573,15 @@
               "actions": [
                 {
                   "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"VieMissile\""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Create"
                   },
                   "parameters": [
@@ -3179,6 +3590,28 @@
                     "PlayerCar.X() + 50 * cos(ToRad(PlayerCar.Angle()))",
                     "PlayerCar.Y() + 50 * sin(ToRad(PlayerCar.Angle()))",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene3D::Base3DBehavior::SetRotationX"
+                  },
+                  "parameters": [
+                    "RedFlame",
+                    "Object3D",
+                    "=",
+                    "90"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene3D::Base3DBehavior::SetRotationY"
+                  },
+                  "parameters": [
+                    "RedFlame",
+                    "Object3D",
+                    "=",
+                    "PlayerCar.Angle() + 180"
                   ]
                 },
                 {
@@ -3199,7 +3632,7 @@
                   "parameters": [
                     "RedFlame",
                     "PlayerCar.Angle()",
-                    "800",
+                    "(PlayerCar.PhysicsCar3D::EngineSpeed() / 10) + 2000",
                     "1"
                   ]
                 }
@@ -3223,13 +3656,22 @@
               "actions": [
                 {
                   "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"DureeBoost\""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Create"
                   },
                   "parameters": [
                     "",
                     "Boost",
-                    "PlayerCar.X() - 50 * cos(ToRad(PlayerCar.Angle()))",
-                    "PlayerCar.Y() - 50 * sin(ToRad(PlayerCar.Angle()))",
+                    "PlayerCar.X() - 25 * cos(ToRad(PlayerCar.Angle()))",
+                    "PlayerCar.Y() - 25 * sin(ToRad(PlayerCar.Angle()))",
                     ""
                   ]
                 },
@@ -3268,13 +3710,13 @@
                 },
                 {
                   "type": {
-                    "value": "Physics3D::PhysicsCar3D::SetEngineSpeedMax"
+                    "value": "AddForceAL"
                   },
                   "parameters": [
                     "PlayerCar",
-                    "PhysicsCar3D",
-                    "=",
-                    "9000"
+                    "PlayerCar.Angle()",
+                    "2000",
+                    "1"
                   ]
                 }
               ]
@@ -3295,6 +3737,15 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"VieBouclier\""
+                  ]
+                },
                 {
                   "type": {
                     "value": "Create"
@@ -3338,11 +3789,170 @@
             "textG": 0,
             "textR": 0
           },
+          "comment": "Fin du Missile"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"VieMissile\"",
+                ">",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "ParticleEmitter3D::ParticleEmitter3D::HasEnded"
+              },
+              "parameters": [
+                "RedFlame",
+                "="
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParticleEmitter3D::ParticleEmitter3D::SetShouldAutodestruct"
+              },
+              "parameters": [
+                "RedFlame",
+                "yes",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Fin du Bouclier"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"DureeBoost\"",
+                ">",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ParticleEmitter3D::ParticleEmitter3D::HasEnded"
+              },
+              "parameters": [
+                "Boost",
+                "="
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParticleEmitter3D::ParticleEmitter3D::SetShouldAutodestruct"
+              },
+              "parameters": [
+                "Boost",
+                "yes",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Fin du Bouclier"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"VieBouclier\"",
+                ">",
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "ParticleEmitter3D::ParticleEmitter3D::HasEnded"
+              },
+              "parameters": [
+                "Bouclier",
+                "="
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParticleEmitter3D::ParticleEmitter3D::SetShouldAutodestruct"
+              },
+              "parameters": [
+                "Bouclier",
+                "yes",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Suivi du Bouclier"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneInstancesCount"
+              },
+              "parameters": [
+                "Boost",
+                "Bouclier",
+                ">",
+                "0"
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -3372,7 +3982,19 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneInstancesCount"
+              },
+              "parameters": [
+                "Boost",
+                "Boost",
+                ">",
+                "0"
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -3381,9 +4003,9 @@
               "parameters": [
                 "Boost",
                 "=",
-                "PlayerCar.X() - 50 * cos(ToRad(PlayerCar.Angle()))",
+                "PlayerCar.X() - 25 * cos(ToRad(PlayerCar.Angle()))",
                 "=",
-                "PlayerCar.Y() - 50 * sin(ToRad(PlayerCar.Angle()))"
+                "PlayerCar.Y() - 25 * sin(ToRad(PlayerCar.Angle()))"
               ]
             },
             {
@@ -3429,6 +4051,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Sky",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3452,13 +4075,13 @@
               },
               "parameters": [
                 "",
-                "10",
                 "3",
-                "1",
-                "0.965",
-                "10",
-                "0",
-                "0.5",
+                "2.5",
+                "0.8",
+                "0.95",
+                "5",
+                "180",
+                "0.3",
                 "",
                 ""
               ]
