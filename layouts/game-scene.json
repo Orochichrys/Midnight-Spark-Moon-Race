@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.2912258866911291,
+    "zoomFactor": 0.28172599320797287,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -66,24 +66,6 @@
       "y": 1245,
       "z": -188,
       "zOrder": 3,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 720,
-      "keepRatio": true,
-      "layer": "Background",
-      "locked": true,
-      "name": "Skybox",
-      "persistentUuid": "4563d4a1-ae53-4ef4-ad8d-9dd785f74c9c",
-      "width": 1280,
-      "x": 0,
-      "y": 0,
-      "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -831,17 +813,6 @@
         "isCastingShadow": true,
         "isReceivingShadow": true
       }
-    },
-    {
-      "assetStoreId": "",
-      "height": 128,
-      "name": "Skybox",
-      "texture": "assets\\StartingBackground.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 128,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
     },
     {
       "assetStoreId": "",
@@ -2005,12 +1976,12 @@
         "StartColor": "255;150;50",
         "StartOpacity": 204,
         "SpayConeAngle": 15,
-        "StartSizeMin": 10,
-        "StartSizeMax": 10,
-        "EndScale": 2,
-        "Flow": 100,
+        "StartSizeMin": 30,
+        "StartSizeMax": 30,
+        "EndScale": 4,
+        "Flow": 250,
         "LifespanMin": 0.5,
-        "LifespanMax": 0.8,
+        "LifespanMax": 1.2,
         "Duration": 123437,
         "StartSpeedMin": 300,
         "StartSpeedMax": 600,
@@ -2066,18 +2037,19 @@
       "content": {
         "EndColor": "0;255;100",
         "StartColor": "0;255;100",
-        "StartOpacity": 100,
+        "StartOpacity": 150,
         "SpayConeAngle": 360,
-        "StartSizeMin": 15,
-        "StartSizeMax": 15,
-        "EndScale": 0.375,
-        "Flow": 100,
+        "StartSizeMin": 40,
+        "StartSizeMax": 60,
+        "EndScale": 1.5,
+        "Flow": 150,
         "LifespanMin": 0.5,
         "LifespanMax": 0.5,
         "Duration": 123456,
-        "StartSpeedMin": 10,
-        "StartSpeedMax": 10,
-        "ShouldAutodestruct": true
+        "StartSpeedMin": 50,
+        "StartSpeedMax": 100,
+        "ShouldAutodestruct": true,
+        "AreParticlesRelative": true
       },
       "childrenContent": {
         "Particle": {
@@ -2126,20 +2098,21 @@
       "effects": [],
       "behaviors": [],
       "content": {
-        "EndColor": "255;255;255",
-        "StartColor": "0;200;225",
-        "StartOpacity": 204,
-        "SpayConeAngle": 1,
-        "StartSizeMin": 8,
-        "StartSizeMax": 8,
-        "EndScale": 0.375,
-        "Flow": 100,
+        "EndColor": "0;255;255",
+        "StartColor": "0;180;225",
+        "StartOpacity": 100,
+        "SpayConeAngle": 20,
+        "StartSizeMin": 12,
+        "StartSizeMax": 22,
+        "EndScale": 0.2,
+        "Flow": 250,
         "LifespanMin": 0.2,
-        "LifespanMax": 0.2,
-        "Duration": 123456,
-        "StartSpeedMin": 800,
-        "StartSpeedMax": 800,
-        "ShouldAutodestruct": true
+        "LifespanMax": 0.4,
+        "Duration": 123437,
+        "StartSpeedMin": 250,
+        "StartSpeedMax": 400,
+        "ShouldAutodestruct": true,
+        "AreParticlesRelative": true
       },
       "childrenContent": {
         "Particle": {
@@ -2203,9 +2176,6 @@
       },
       {
         "objectName": "TrafficCone"
-      },
-      {
-        "objectName": "Skybox"
       },
       {
         "objectName": "debug"
@@ -2339,6 +2309,18 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Debug Raycast"
+    },
+    {
       "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
@@ -2363,6 +2345,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "IA",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2378,6 +2361,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Boite Mystère",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2453,6 +2437,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2609,17 +2594,6 @@
                             "AI_Car.X()",
                             "AI_Car.Y()",
                             ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AddForceAL"
-                          },
-                          "parameters": [
-                            "Bouclier",
-                            "AI_Car.Angle()",
-                            "600",
-                            "1"
                           ]
                         }
                       ]
@@ -3061,6 +3035,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Player",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3138,7 +3113,7 @@
                 "PlayerCar",
                 "PowerUp",
                 "=",
-                "RandomInRange(0,2)"
+                "1"
               ]
             },
             {
@@ -3201,9 +3176,20 @@
                   "parameters": [
                     "",
                     "RedFlame",
-                    "PlayerCar.X()",
-                    "PlayerCar.Y()",
+                    "PlayerCar.X() + 50 * cos(ToRad(PlayerCar.Angle()))",
+                    "PlayerCar.Y() + 50 * sin(ToRad(PlayerCar.Angle()))",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene3D::Base3DBehavior::SetZ"
+                  },
+                  "parameters": [
+                    "RedFlame",
+                    "Object3D",
+                    "=",
+                    "PlayerCar.Object3D::Z() + 10"
                   ]
                 },
                 {
@@ -3242,20 +3228,53 @@
                   "parameters": [
                     "",
                     "Boost",
-                    "PlayerCar.X()",
-                    "PlayerCar.Y()",
+                    "PlayerCar.X() - 50 * cos(ToRad(PlayerCar.Angle()))",
+                    "PlayerCar.Y() - 50 * sin(ToRad(PlayerCar.Angle()))",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "AddForceAL"
+                    "value": "Scene3D::Base3DBehavior::SetRotationX"
                   },
                   "parameters": [
                     "Boost",
-                    "PlayerCar.Angle()",
-                    "600",
-                    "1"
+                    "Object3D",
+                    "=",
+                    "90"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene3D::Base3DBehavior::SetZ"
+                  },
+                  "parameters": [
+                    "Boost",
+                    "Object3D",
+                    "=",
+                    "PlayerCar.Object3D::Z() + 5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene3D::Base3DBehavior::SetRotationY"
+                  },
+                  "parameters": [
+                    "Boost",
+                    "Object3D",
+                    "=",
+                    "PlayerCar.Angle() + 180"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Physics3D::PhysicsCar3D::SetEngineSpeedMax"
+                  },
+                  "parameters": [
+                    "PlayerCar",
+                    "PhysicsCar3D",
+                    "=",
+                    "9000"
                   ]
                 }
               ]
@@ -3287,17 +3306,6 @@
                     "PlayerCar.Y()",
                     ""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "AddForceAL"
-                  },
-                  "parameters": [
-                    "Bouclier",
-                    "AI_Car.Angle()",
-                    "600",
-                    "1"
-                  ]
                 }
               ]
             },
@@ -3316,6 +3324,143 @@
                     "-1"
                   ]
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Suivi du Bouclier"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Bouclier",
+                "=",
+                "PlayerCar.X()",
+                "=",
+                "PlayerCar.Y()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Suivi du Boost"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Boost",
+                "=",
+                "PlayerCar.X() - 50 * cos(ToRad(PlayerCar.Angle()))",
+                "=",
+                "PlayerCar.Y() - 50 * sin(ToRad(PlayerCar.Angle()))"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetZ"
+              },
+              "parameters": [
+                "Boost",
+                "Object3D",
+                "=",
+                "PlayerCar.Object3D::Z() + 5"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetRotationX"
+              },
+              "parameters": [
+                "Boost",
+                "Object3D",
+                "=",
+                "90"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene3D::Base3DBehavior::SetRotationY"
+              },
+              "parameters": [
+                "Boost",
+                "Object3D",
+                "=",
+                "PlayerCar.Angle() + 180"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Sky",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Sky3D::Create_Sky"
+              },
+              "parameters": [
+                "",
+                "10",
+                "3",
+                "1",
+                "0.965",
+                "10",
+                "0",
+                "0.5",
+                "",
+                ""
               ]
             }
           ]
@@ -3802,6 +3947,18 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": ""
     }
   ],
   "layers": [
@@ -3941,10 +4098,6 @@
     {
       "name": "Object3D",
       "type": "Scene3D::Base3DBehavior"
-    },
-    {
-      "name": "ObjectSpawner",
-      "type": "ObjectSpawner::ObjectSpawner"
     },
     {
       "name": "Opacity",
