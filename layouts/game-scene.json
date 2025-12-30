@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.28172599320797287,
+    "zoomFactor": 0.2912258866911291,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -702,9 +702,28 @@
       "name": "BoiteMystere",
       "persistentUuid": "8867280d-bce5-4c31-a0d0-ef075706f5cd",
       "width": 0,
-      "x": 1594,
-      "y": 1421,
+      "x": 1605,
+      "y": 1330,
+      "z": 10,
       "zOrder": 26,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 50,
+      "height": 50,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BoiteMystere",
+      "persistentUuid": "7e0b2b91-22ce-4be7-961f-aa9e71c12535",
+      "width": 50,
+      "x": 1607,
+      "y": 1167,
+      "z": 10,
+      "zOrder": 27,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -716,11 +735,29 @@
       "keepRatio": true,
       "layer": "",
       "name": "BoiteMystere",
-      "persistentUuid": "7e0b2b91-22ce-4be7-961f-aa9e71c12535",
+      "persistentUuid": "0d60adc7-aef4-4feb-ad1e-aad392062e79",
       "width": 0,
-      "x": 1605,
-      "y": 1261,
-      "zOrder": 27,
+      "x": 1608,
+      "y": 1471,
+      "z": 10,
+      "zOrder": 28,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BoiteMystere",
+      "persistentUuid": "c58fa27f-aebd-4c7a-8cdc-2380462de363",
+      "width": 0,
+      "x": 1606,
+      "y": 1581,
+      "z": 10,
+      "zOrder": 29,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -897,7 +934,7 @@
         {
           "name": "PowerUp",
           "type": "number",
-          "value": 0
+          "value": -1
         },
         {
           "name": "TimerPlayer",
@@ -1442,7 +1479,7 @@
         "rightFaceResourceRepeat": true,
         "topFaceResourceRepeat": true,
         "bottomFaceResourceRepeat": true,
-        "materialType": "StandardWithoutMetalness",
+        "materialType": "Basic",
         "isCastingShadow": true,
         "isReceivingShadow": true,
         "tint": "255;255;255"
@@ -1733,6 +1770,11 @@
           "name": "TimerIA",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "AttenteAvantPowerUp",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -1969,10 +2011,11 @@
         "Flow": 100,
         "LifespanMin": 0.5,
         "LifespanMax": 0.8,
-        "Duration": 123456,
+        "Duration": 123437,
         "StartSpeedMin": 300,
         "StartSpeedMax": 600,
-        "ShouldAutodestruct": true
+        "ShouldAutodestruct": true,
+        "AreParticlesRelative": true
       },
       "childrenContent": {
         "Particle": {
@@ -2320,18 +2363,289 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "IA",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "AI_Car",
           "conditions": [],
           "actions": [],
           "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Boite Mystère",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "BoiteMystere",
+                        "AI_Car",
+                        "BoiteMystere",
+                        "Physics3D",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "PowerUp",
+                        "=",
+                        "-1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "BoiteMystere",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "AttenteAvantPowerUp",
+                        "=",
+                        "RandomInRange(0,10)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "PowerUp",
+                        "=",
+                        "RandomInRange(0,2)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "\"powerUpTimer\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "\"powerUpTimer\"",
+                        ">=",
+                        "AI_Car.AttenteAvantPowerUp"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "PowerUp",
+                        ">",
+                        "-1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "AttenteAvantPowerUp",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PauseObjectTimer"
+                      },
+                      "parameters": [
+                        "AI_Car",
+                        "\"powerUpTimer\""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "AI_Car",
+                            "PowerUp",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "RedFlame",
+                            "AI_Car.Angle()",
+                            "800",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "RedFlame",
+                            "AI_Car.X()",
+                            "AI_Car.Y()",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "AI_Car",
+                            "PowerUp",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Boost",
+                            "AI_Car.X()",
+                            "AI_Car.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Boost",
+                            "AI_Car.Angle()",
+                            "600",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "AI_Car",
+                            "PowerUp",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Bouclier",
+                            "AI_Car.X()",
+                            "AI_Car.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Bouclier",
+                            "AI_Car.Angle()",
+                            "600",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "AI_Car",
+                            "PowerUp",
+                            "=",
+                            "-1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
@@ -2583,6 +2897,7 @@
               "comment": "Le Calcul du Cerveau (Calcul du virage)"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -2679,6 +2994,7 @@
               "comment": "Mouvement Final"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -2822,7 +3138,7 @@
                 "PlayerCar",
                 "PowerUp",
                 "=",
-                "Random(3)"
+                "RandomInRange(0,2)"
               ]
             },
             {
@@ -2970,6 +3286,17 @@
                     "PlayerCar.X()",
                     "PlayerCar.Y()",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Bouclier",
+                    "AI_Car.Angle()",
+                    "600",
+                    "1"
                   ]
                 }
               ]
@@ -3145,7 +3472,6 @@
     },
     {
       "aiGeneratedEventId": "01KDDXHCR37CXPQG24CH7WJ4PA",
-      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -3476,11 +3802,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": []
     }
   ],
   "layers": [
@@ -3620,6 +3941,10 @@
     {
       "name": "Object3D",
       "type": "Scene3D::Base3DBehavior"
+    },
+    {
+      "name": "ObjectSpawner",
+      "type": "ObjectSpawner::ObjectSpawner"
     },
     {
       "name": "Opacity",
